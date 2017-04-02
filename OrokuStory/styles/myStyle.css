@@ -1,20 +1,75 @@
+html{height:100%;}
 body 
 {
     direction:rtl;
     background-image:url("../images/paper2.jpg");
     background-position:center;
-    background-size:cover
-
+    background-size:cover;
+    padding:10px;
+    padding-bottom:80px; 
+    height:100%;
 }
 #container{
     margin:0 auto;
     Width: 960px;
-    background-image:url("../images/OrokuProfile.jpg");
-    background-position:left center;
-    background-size:300px 450px;
-    background-repeat:no-repeat;
+    min-height:100%;
+    margin-bottom:-100px;
 }
+/*חלק מניסיונות כושל לעשות שהפוטר יהיה בתחתית הדף*/
+
+    #container:after {
+        content:"";
+        display:block;
+    }
+
+    #container:after, footer {height:100%;}
+
+#nav1 ul {
+    list-style: none;
+
+    /*הגדרת רוחב ומרכוז התפריט לאמצע*/
+    width: 712px;
+    position: fixed;
+    margin: 0 auto; left:0px; right:0px; top:10px;
+
+}
+
+    #nav1 ul li {
+        display: inline-block;
+        float: right;
+    }
+
+        #nav1 ul li a {
+            display: block;
+            background-color: #2f2f33;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            width: 120px;
+            height: 30px;
+            Padding-top: 10px;
+            border-left-style:groove;
+            border-top-left-radius:10px;
+            border-right-style:groove;
+            border-top-right-radius:10px;
+        }
+
+            #nav1 ul li a:hover {
+                background-color: black;
+            }
+
+            #nav1 ul li a:active {
+                background-color: gray;
+            }
+            
+            #nav1 ul li a.selected {
+                background-color: #454545;
+            }
+
+
+
 aside{
+    margin-top:20px;
     padding-top:50px;
     text-align:center;
 }
@@ -23,14 +78,16 @@ h2{
     font-size:18pt;
     margin:10px;
     font-weight:bolder;
-    color:darkslateblue;
+    color:black;
     font-family:'Guttman Yad-Brush';
-    text-shadow: 3px 2px lightgray;
+    text-shadow: 3px 2px darkgray;
 }
 span{
     text-decoration:underline;
     font-weight: bolder;
 }
+
+
 #boldd{    
     font-weight: bold;
     text-decoration:none;
