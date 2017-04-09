@@ -1,0 +1,95 @@
+﻿<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+
+    <!-- Scripts -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+    <script src="https://webdevelopmentcourse.github.io/contactUs/WebDevelopmentCourse/jScripts/contactUs.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <div id="container">
+        <h1>תואר ראשון</h1>
+        <h2>בטכנולוגיות למידה</h2>
+    </div>
+
+    <p>
+        מכון טכנולוגי חולון מזמין אותך ללמוד תואר אקדמי ייחודי אשר משלב בין 3 עולמות,
+        <strong> הדרכה, עיצוב ותכנות.</strong><br>
+        מטרת התואר היא להכשיר מקצוענים שישתלבו בארגונים במגזר העסקי והציבורי ויובילו את תחום הלמידה והמידע בעידן הדיגיטאלי.
+    </p>
+    <H3>אז מה לומדים?</H3>
+    <div id="telem"></div>
+    <H4>במה מועסקים בוגרי תואר ראשון בטכנולוגיות למידה?</H4>
+    <p id="newP">בוגרי טכנולוגיות למידה משמשים בתפקידי מפתח בארגונים מובילים בתחומי:</p>
+    <table>
+        <tr>
+            <td>
+                <ul>
+                    <li>פיתוח וניהול הדרכה</li>
+                    <li>ניהול ידע בארגונים</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>עיצוב ממשקי מידע</li>
+                    <li>פיתוח ועיצוב אפליקציות במובייל</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>פיתוח וניהול אתרים</li>
+                    <li>פיתוח משחקי מחשב</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <P id="Details">אנא מלא\י את פרטייך ויועץ לימודים יחזור אלייך בהקדם</P>
+    <form> 
+    <input type="hidden" id="myEmail" name="name" value="itai.einati@gmail.com">
+    
+            <label for="FirstName">
+                שם פרטי:
+                <input type="text" id="FirstName" placeholder="הזן את שמך הפרטי" />
+            </label>
+
+            <label for="LastName">
+                שם משפחה:
+                <input type="text" id="LastName" placeholder="הזן את שם משפחתך" />
+            </label>
+
+        <label for="email">
+            דוא"ל:
+            <input type="text" id="email" placeholder="הזן כתובת דואר אלקטרוני" />
+        </label>
+
+        <label for="mobile">
+            טלפון:
+            <input type="text" id="mobile" placeholder="מספר טלפון ליצירת קשר" />
+        </label>
+
+        <div id="space">
+            <label for="cb1">
+                <br>
+                <input type="checkbox" id="cb1" checked /> מוכן לקבל דואר פירסומי
+            </label>
+
+            <input type="submit" id="Send" value="שלח">
+            <div id="feedback"></div>
+        </div>
+        </form>
+    <P id="more">לפרטים נוספים ניתן לראות בעמוד <a href="#">הפקולטה לטכנולוגיות למידה</a> </P>
+    <div id="empty1"></div>
+</body>
+</html>

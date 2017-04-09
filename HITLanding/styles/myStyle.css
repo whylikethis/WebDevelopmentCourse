@@ -1,0 +1,138 @@
+body 
+{
+    direction:rtl;
+    background-color:lightcyan;
+}
+#container{
+    margin:0 auto;
+    Width: 960px;
+    background-image:url("../images/Student.jpg");
+    background-repeat:no-repeat;
+    background-size:contain;
+    height:495px;
+}
+
+h1 {
+    position: absolute;
+    bottom: 150px;
+    left: 380px;
+    font-size: 45pt;
+    color:aliceblue;
+    -webkit-text-stroke: 2px black;
+    text-shadow: 4px 4px 10px black;
+}
+h2 {
+    position: absolute;
+    bottom: 90px;
+    left: 150px;
+    font-size: 50pt;
+    color:aliceblue;
+    -webkit-text-stroke: 2px black;
+    text-shadow: 4px 4px 10px black;
+}
+#telem{
+    margin:0 auto;
+    Width: 960px;
+    background-image:url("../images/Telem.png");
+    background-repeat:no-repeat;
+    background-size:contain;
+    height:255px;
+}
+p{
+    margin:0 auto;
+    Width: 960px;
+    padding-top:20px;
+    font-size:14pt;
+    background-color: rgb(158, 191, 233);
+}
+h3{
+    margin:0 auto;
+    Width: 960px;
+    font-size:30pt;
+    padding-top:15px;
+    background-color: rgb(158, 191, 233);
+}
+h4{
+    margin:0 auto;
+    Width: 960px;
+    font-size:16pt;
+    padding-top:15px;
+    font-weight:bolder;
+    background-color: rgb(158, 191, 233);
+}
+#newP{
+    padding-top:7px;
+    padding-bottom:25px;
+
+}
+table{
+    margin:0 auto;
+    Width: 960px;
+    background-color: rgb(158, 191, 233);
+
+}
+td{
+    margin:0 auto;
+    Width: 960px;
+    margin-right:152px;
+    padding-right:40Px;
+    padding-bottom:15px;
+}
+form{
+    padding-top:15px;
+    padding-bottom:25px;
+    margin:0 auto;
+    Width: 960px;
+    display:block;
+    background-color: rgb(91, 155, 213);
+
+}
+#send{
+    margin:0 auto;
+    Width: 960px;
+    display:inline-block;
+    padding-top:15Px;
+    padding-bottom:15Px;
+}
+label{
+        padding-right:10Px;
+        padding-top:15Px;
+        padding-bottom:15Px;
+}
+#Details {
+    padding-top:15px;
+    margin:0 auto;
+    Width: 960px;
+    display:block;
+    background-color: rgb(91, 155, 213);
+    font-weight:bold;
+}
+#more{
+    padding-top:15px;
+    margin:0 auto;
+    Width: 960px;
+    display:block;
+    background-color: rgb(91, 155, 213);
+    text-align:center;
+}
+a{
+    color:darkblue;
+    text-decoration:none;
+    font-weight:bold;
+}
+a:hover{
+    color:darkblue;
+    text-decoration:underline;
+    font-weight:bolder;
+    padding-bottom:50px;
+}
+#empty1{
+    padding-top:50px;
+    margin:0 auto;
+    Width: 960px;
+    background-color: rgb(91, 155, 213);
+}
+#space{
+  padding-top:15px;
+  text-align:center;
+}
