@@ -1,0 +1,171 @@
+body {
+    direction: rtl;
+}
+
+#container {
+    margin: 0 auto;
+    Width: 960px;
+}
+
+/*תפריט ניווט*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #408000;
+    box-shadow: 0px 2px 1px gray;
+    margin-bottom: 30px;
+}
+
+li {
+    float: right;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover {
+            background-color: #59b300;
+            color: black;
+            border-radius: 25px;
+        }
+
+.active {
+    background-color: #73e600;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+/*סוף תפריט ניווט*/
+
+li, p, h1 {
+    font-family: 'Alef', sans-serif;
+    font-size: 18px;
+}
+
+
+#sides {
+    margin: 0;
+    width: 960px;
+    height: 200px;
+    padding: 50px;
+    background-color: #f2f2f3;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 15px 1px black;
+}
+
+#left {
+    float: left;
+    width: 70%;
+    overflow: hidden;
+}
+
+#right {
+    float: right;
+    width: 25%;
+    overflow: hidden;
+    font-size: 45px;
+    text-align: center;
+    padding-left: 15Px;
+    color: #59b300;
+}
+
+#quote {
+    font-size: 24pt;
+    text-align: center;
+    background-color: #f2f2f3;
+    color: #59b300;
+    margin: 0 auto;
+    width: 700px;
+    border-radius: 37px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 15px 1px black;
+    padding: 7px;
+    font-weight: bold;
+}
+
+#albert {
+    font-size: 14pt;
+    color: #66cc00;
+    font-weight: normal;
+}
+
+/*time in the wind*/
+#TimeRight {
+    float: right;
+    width: 28%;
+    overflow: hidden;
+    font-size: 30px;
+    text-align: center;
+    padding-left: 7Px;
+    color: #59b300;
+}
+
+.pic {
+    margin: 10px 50px;
+    float: left;
+    width: 380px;
+    background-color: #f2f2f3;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 15px 1px black;
+}
+#CoffeePic{
+        margin: 25px 50px;
+
+}
+
+    .pic:hover {
+        border: 1px solid gray;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 20px 2px black;
+    }
+
+.desc {
+    padding: 15px;
+    text-align: center;
+    color: #59b300;
+    font-weight: bold;
+    margin: 10px;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    padding:50px 210px;
+}
+#emojisides {
+    margin: 0;
+    width: 960px;
+    height: 200px;
+    padding: 30px;
+    background-color: #f2f2f3;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 15px 1px black;
+}
+#emojiVideo{
+    display: block;
+    margin: 0 auto;
+    padding: 50px 1px;
+}
+#Middle{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 250px;
+    margin-bottom:350Px;
+}
+
+.Coffepic{
+
+
+}
