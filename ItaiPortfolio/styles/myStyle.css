@@ -7,7 +7,7 @@ body {
     Width: 960px;
 }
 
-/*ϊτψιθ πιεεθ*/
+/*ΓΊΓ΄ΓΈΓ©Γ¨ Γ°Γ©Γ₯Γ₯Γ¨*/
 ul {
     list-style-type: none;
     margin: 0;
@@ -42,7 +42,7 @@ li {
     border-radius: 25px;
 }
 
-/*ρεσ ϊτψιθ πιεεθ*/
+/*Γ±Γ₯Γ³ ΓΊΓ΄ΓΈΓ©Γ¨ Γ°Γ©Γ₯Γ₯Γ¨*/
 
 li, p, h1 {
     font-family: 'Alef', sans-serif;
@@ -165,7 +165,7 @@ iframe {
     margin-bottom:350Px;
 }
 
-.Coffepic{
-
-
+#audioThanks{
+   padding: 0 300px;
+   text-align:center;
 }
