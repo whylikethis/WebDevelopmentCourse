@@ -4,7 +4,7 @@ var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
 		{name:"Blow the balloon_atlas_P_", frames: [[1639,0,1637,1250],[0,0,1637,1715],[2370,4040,1003,725],[3278,0,709,881],[0,3465,1208,876],[1210,4038,1158,867],[1312,2296,1306,875],[2620,3171,1305,867],[0,2592,1306,871],[2620,2296,1306,873],[0,1717,1310,873],[1308,3173,1296,863],[3278,883,783,338],[3989,0,104,104],[3155,4840,530,243],[2935,1252,1080,1027],[3375,4040,466,798],[0,4604,783,337],[0,4343,1035,259],[1639,1252,1294,1042],[785,4838,372,232],[785,4604,372,232],[2370,4767,783,337],[3687,4840,400,126]]},
-		{name:"Blow the balloon_atlas_NP_", frames: [[0,0,1471,826],[1262,828,148,83],[888,1062,372,232],[514,828,372,232],[1262,1113,372,232],[1636,1113,372,232],[1473,0,512,369],[1473,742,512,369],[0,828,512,369],[1473,371,512,369],[514,1062,372,232],[888,828,372,232]]}
+		{name:"Blow the balloon_atlas_NP_", frames: [[0,0,1471,826],[1262,828,148,83],[888,828,372,232],[514,1062,372,232],[888,1062,372,232],[514,828,372,232],[1473,0,512,369],[1473,371,512,369],[0,828,512,369],[1473,742,512,369],[1636,1113,372,232],[1262,1113,372,232]]}
 ];
 
 
@@ -1441,12 +1441,9 @@ p.nominalBounds = new cjs.Rectangle(0,0,160.3,69);
 	this.frame_0 = function() {
 		this.stop();
 	}
-	this.frame_1 = function() {
-		this.stop();
-	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// Layer_1
 	this.text = new cjs.Text("מלחמות ישראל", "bold 30px 'Arial'");
@@ -1462,13 +1459,9 @@ p.nominalBounds = new cjs.Rectangle(0,0,160.3,69);
 	this.shape_1 = new cjs.Shape();
 	this.shape_1.graphics.f("#FFFFFF").s().p("Az3DoIAAnPMAnvAAAIAAHPg");
 
-	this.shape_2 = new cjs.Shape();
-	this.shape_2.graphics.f("#000000").s().p("Az3DoIAAnPMAnvAAAIAAHPg");
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.text}]}).wait(1));
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.text,p:{color:"#000000"}}]}).to({state:[{t:this.shape_2},{t:this.shape},{t:this.text,p:{color:"#FFFFFF"}}]},1).wait(1));
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-128.7,-24.7,257.4,49.4);
+}).prototype = getMCSymbolPrototype(lib.lcmbWar, new cjs.Rectangle(-128.7,-24.7,257.4,49.4), null);
 
 
 (lib.lcmbDesny = function(mode,startPosition,loop) {
@@ -1478,12 +1471,9 @@ p.nominalBounds = new cjs.Rectangle(-128.7,-24.7,257.4,49.4);
 	this.frame_0 = function() {
 		this.stop();
 	}
-	this.frame_1 = function() {
-		this.stop();
-	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// Layer_1
 	this.text = new cjs.Text("דיסני", "bold 30px 'Arial'");
@@ -1499,13 +1489,9 @@ p.nominalBounds = new cjs.Rectangle(-128.7,-24.7,257.4,49.4);
 	this.shape_1 = new cjs.Shape();
 	this.shape_1.graphics.f("#FFFFFF").s().p("Az3DoIAAnPMAnvAAAIAAHPg");
 
-	this.shape_2 = new cjs.Shape();
-	this.shape_2.graphics.f("#000000").s().p("Az3DoIAAnPMAnvAAAIAAHPg");
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.text}]}).wait(1));
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.text,p:{color:"#000000"}}]}).to({state:[{t:this.shape_2},{t:this.shape},{t:this.text,p:{color:"#FFFFFF"}}]},1).wait(1));
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-128.7,-24.7,257.4,49.4);
+}).prototype = getMCSymbolPrototype(lib.lcmbDesny, new cjs.Rectangle(-128.7,-24.7,257.4,49.4), null);
 
 
 (lib.ClosePopUp = function(mode,startPosition,loop) {
@@ -1967,10 +1953,10 @@ p.nominalBounds = new cjs.Rectangle(0,0,235.8,365.2);
 
 	// Layer_1
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f().s("#999999").ss(3,1,1).p("AA/hFIBWAAIiVEaIiUkaIBNAAIAAiEICGAAgAhHhFICGAAAjhjhIHDAAIAAHDInDAAg");
+	this.shape.graphics.f().s("#999999").ss(3,1,1).p("AhHhFIAAiEICGAAIAACEIBWAAIiVEaIiUkaIBNAAICGAAAjhjhIHDAAIAAHDInDAAg");
 
 	this.shape_1 = new cjs.Shape();
-	this.shape_1.graphics.f("#000000").s().p("AiUhLIBNAAICGAAIBWAAIiUEagAA/hLIiGAAIAAiEICGAAIAACEgAhHhLg");
+	this.shape_1.graphics.f("#000000").s().p("AiUhLIBNAAICGAAIiGAAIAAiEICGAAIAACEIBWAAIiUEag");
 	this.shape_1.setTransform(0,0.6);
 
 	this.shape_2 = new cjs.Shape();
@@ -1989,10 +1975,10 @@ p.nominalBounds = new cjs.Rectangle(0,0,235.8,365.2);
 	new cjs.ButtonHelper(this.comboDesny, 0, 1, 1);
 
 	this.shape_3 = new cjs.Shape();
-	this.shape_3.graphics.f().s("#999999").ss(3,1,1).p("AhHhFIAAiEICGAAIAACEIBWAAIiVEaIiUkaIBNAAICGAAAjhjhIHDAAIAAHDInDAAg");
+	this.shape_3.graphics.f().s("#999999").ss(3,1,1).p("AA/hFIBWAAIiVEaIiUkaIBNAAIAAiEICGAAgAhHhFICGAAAjhjhIHDAAIAAHDInDAAg");
 
 	this.shape_4 = new cjs.Shape();
-	this.shape_4.graphics.f("#000000").s().p("AiUhLIBNAAICGAAIiGAAIAAiEICGAAIAACEIBWAAIiUEag");
+	this.shape_4.graphics.f("#000000").s().p("AiUhLIBNAAICGAAIBWAAIiUEagAA/hLIiGAAIAAiEICGAAIAACEgAhHhLg");
 	this.shape_4.setTransform(0,0.6);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_2},{t:this.shape_1},{t:this.shape}]}).to({state:[{t:this.shape_2},{t:this.shape_1},{t:this.shape}]},1).to({state:[{t:this.shape_2},{t:this.shape_4},{t:this.shape_3},{t:this.comboDesny},{t:this.ComboWar}]},1).to({state:[{t:this.shape_2},{t:this.shape_1},{t:this.shape},{t:this.comboDesny},{t:this.ComboWar}]},1).wait(1));
@@ -2160,9 +2146,6 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 		var stageW = parseInt(canvas.style.width);
 		selfHome.HowTo1.cursor = "not-allowed";
 		
-		var frequency = 200;
-		stage.enableMouseOver(frequency);
-		
 		selfHome.closeCombo.addEventListener("click", ComboDownFunction.bind(this));
 		function ComboDownFunction() {
 			var cmbDesny = new(lib.lcmbDesny);
@@ -2171,8 +2154,6 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 			cmbDesny.x = 500
 			cmbDesny.y = 260
 			cmbDesny.addEventListener('click', DisneyGame);
-			//cmbDesny.addEventListener('mouseover',DesnyOver);
-			//cmbDesny.addEventListener('mouseout',DesnyOut);
 			stage.addChild(cmbDesny);
 		
 			var cmbWar = new(lib.lcmbWar);
@@ -2180,7 +2161,6 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 			cmbWar.x = 500
 			cmbWar.y = 308
 			cmbWar.addEventListener('click', WarsGame);
-			//cmbWar.addEventListener('mouseover',WarsOver);
 			stage.addChild(cmbWar);
 		}
 		
@@ -2195,24 +2175,6 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 			BeforeGameStarts();
 		}
 		
-		/*function DesnyOver(e) {
-		e.currentTarget.gotoAndPlay(2);
-		}
-		function DesnyOut(e) {
-		e.currentTarget.gotoAndPlay(1);
-		}*/
-		
-		
-		//selfHome.Disney.addEventListener("click", DisneyGame.bind(selfHome));
-		//function DisneyGame() {
-		//	GameNumber = 0;
-		//	BeforeGameStarts();
-		//}
-		////selfHome.Wars.addEventListener("click", WarsGame.bind(selfHome));
-		//function WarsGame() {
-		//	GameNumber = 1;
-		//	BeforeGameStarts();
-		//}
 		function BeforeGameStarts() {
 			selfHome.ProgressBar.alpha = 1;
 			selfHome.ClockFrame.alpha = 1;
@@ -2249,7 +2211,7 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 			rnd = Math.floor((Math.random() * (GameQ[GameNumber].length + 0)));
 		
 			if (GameQ[GameNumber][rnd][0] == true) { //שאלה שכבר נענתה
-				console.log("i was true")
+				//console.log("i was true")
 				startGame();
 			} else if (GameQ[GameNumber][rnd][0] == false) { // שאלה שעדיין לא נענתה נכון
 				Timer();
@@ -2258,7 +2220,7 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 				var Q_isString = Q_BeString.substring(0, 8);
 		
 				if (Q_isString == 'function') { // התנהגות למסיח תמונה
-					console.log("Question Pic Here");
+					//console.log("Question Pic Here");
 					var Qpic = new(GameQ[GameNumber][rnd][2]);
 					Qpic.name = "QuestionPic";
 					Qpic.x = 100
@@ -2292,7 +2254,7 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 					Option.y = 200;
 					Option.name = "Option" + i;
 		
-					if (ShuffleAnswer[i - 1] == GameQ[GameNumber][rnd][4]) {
+					if (ShuffleAnswer[i - 1] == GameQ[GameNumber][rnd][4]) { //מבדל את התשובה הנכונה מהלא נכונות
 						TheCorrectAnswer = "Option" + i;
 					}
 		
@@ -2300,7 +2262,7 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 					var isString = beString.substring(0, 8);
 		
 					if (isString == 'function') { // התנהגות למסיח תמונה
-						console.log("Pic Here");
+						//console.log("Pic Here");
 						var Apic = new(ShuffleAnswer[i - 1]);
 						Apic.name = "AnswerPic" + i;
 						Option.Apic2.addChild(Apic);
@@ -2332,7 +2294,7 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 		} //סוף פונקציה
 		
 		
-		function BallonClick(event) {
+		function BallonClick(event) { //מזהה בחירת תשובה ומתנהג בהתאם לתשובה
 			//console.log(GameQ[GameNumber])
 			selfHome.SubTxt.text = "";
 			for (var i = 0; i < RemoveZoom.length; i++) {
@@ -2362,7 +2324,6 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 				}
 		
 				stage.addChild(success);
-				//selfHome.ProBar.x = selfHome.ProBar.x + ProgressBar;
 		
 				var ProgressBar2 = parseInt((GameFinish / GameQ[GameNumber].length) * 100)
 				selfHome.ProgressBar.gotoAndStop(ProgressBar2)
@@ -2390,7 +2351,7 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 				}
 				stage.addChild(Unsuccess);
 				GameQ[GameNumber][rnd][1] = GameQ[GameNumber][rnd][1] / 2;
-				console.log(GameQ[GameNumber][rnd][1])
+				//console.log(GameQ[GameNumber][rnd][1])
 		
 				setTimeout(function () {
 					continueBtn.visible = true;
@@ -2401,7 +2362,6 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 		
 			if (GameFinish == GameQ[GameNumber].length) {
 				selfHome.ProgressBar.gotoAndStop(100);
-				//continueBtn.visible = false;
 				//alert("סיימת את המשחק");
 		
 				var TotalScore = 0;
@@ -2473,7 +2433,6 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 			} else {
 				var BigPic = new(ShuffleAnswer[PicNum - 1]);
 			}
-			//var BigPic = new(ShuffleAnswer[PicNum - 1]);
 			BigPic.x = 20;
 			BigPic.y = 20;
 			BigPic.scaleX = 2.6;
@@ -2486,7 +2445,7 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 			RemoveArr.push("PicPopUp1");
 			stage.addChild(PicPopUp);
 			PicPopUp.addChild(BigPic);
-			console.log(GameQ[GameNumber][rnd][1]);
+			//console.log(GameQ[GameNumber][rnd][1]);
 		}
 		
 		var continueBtn = new(lib.contiBtn);
@@ -2521,7 +2480,7 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 				}
 				selfHome.GameTimeTXT.text = checkTime(GHour) + ":" + checkTime(GMin) + ":" + checkTime(GSec);
 				function checkTime(x) {
-					if (x < 10) { // add zero in front of numbers < 10
+					if (x < 10) { 
 						x = "0" + x;
 					}
 					return x;
@@ -2529,7 +2488,7 @@ p.nominalBounds = new cjs.Rectangle(-24,-24,48.2,48.2);
 		
 				if (selfHome.TimeOutTxt.text == 0) {
 					GameQ[GameNumber][rnd][1] = GameQ[GameNumber][rnd][1] / 2;
-					console.log(GameQ[GameNumber][rnd][1])
+					//console.log(GameQ[GameNumber][rnd][1])
 					continueBtn.visible = true;
 		
 					var TimePopUp = new(lib.TimePop);
