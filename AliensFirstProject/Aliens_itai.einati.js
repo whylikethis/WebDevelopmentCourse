@@ -1170,7 +1170,7 @@ lib.properties = {
 	opacity: 1.00,
 	webfonts: {},
 	manifest: [
-		{src:"images/_1.jpg", id:"_1"},
+		{src:"images/_1.png", id:"_1"},
 		{src:"images/Aliens_itai.einati_atlas_P_.png", id:"Aliens_itai.einati_atlas_P_"},
 		{src:"sounds/asishort.mp3", id:"asishort"},
 		{src:"sounds/xfilessort.mp3", id:"xfilessort"}
