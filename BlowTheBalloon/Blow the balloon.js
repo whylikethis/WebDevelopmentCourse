@@ -3832,7 +3832,7 @@ p.nominalBounds = new cjs.Rectangle(-76.8,-248,167.8,294.5);
 		enterCode = new Object();
 		enterCode.classes = gameCode_txt.value;
 		gameCodeUser = enterCode.classes; //משתנה - קוד המשחק
-		$.post("/Handler.ashx", { //שליחת בקשה
+		$.post("https://whylikethis.github.io/WebDevelopmentCourse/BlowTheBalloon/Handler.ashx", { //שליחת בקשה
 			GameCode: gameCodeUser
 		})
 		.done(function (response) {
