@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quizTree>
+  <!--NumOfGames is like ID in SQL.. No Number will be twice-->
+  <NumOfGames>3</NumOfGames>
+  <topic id="1" NumOfQuestions="11" GameCode="101" timePerQuest="30" isPublish="true">
+    <subject>מלחמות ישראל</subject>
+    <questions>
+      <question id="1">
+        <questionText>באיזה שנה התקיימה מלחמת העצמאות?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer>1948</answer>
+          <answer>1939</answer>
+          <answer>1952</answer>
+          <answer>1973</answer>
+        </answers>
+      </question>
+      <question id="2">
+        <questionText>אריאל שרון יזם והוביל את תכנית ההתנתקות במהלך כהונתו כראש ממשלת ישראל.</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="2">
+          <answer>נכון</answer>
+          <answer>לא נכון</answer>
+        </answers>
+      </question>
+      <question id="3">
+        <questionText>איזה מדינה לא השתתפה במלחמת יום העצמאות?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="3">
+          <answer>איראן</answer>
+          <answer>מצריים</answer>
+          <answer>עיראק</answer>
+        </answers>
+      </question>
+      <question id="4">
+        <questionText>יוני נתניהו ז"ל נפל במהלך...</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer>מבצע אנטבה: מבצע לשחרור החטופים באוגנדה 1967</answer>
+          <answer>מבצע יואב: בלחמת העצמאות באזור נגבה</answer>
+          <answer>מבצע קינוח: בקרב על החרמון במלחמת יום הכיפורים</answer>
+          <answer>מבצע שלום הגליל: בקרב על כיבוש הבופור</answer>
+        </answers>
+      </question>
+      <question id="5">
+        <questionText>היכן צולמה התמונה הבאה, ביוני 1967?</questionText>
+        <img>uploadedFiles/imageNewName20_10_18-19_34_07.jpg</img>
+        <answers NumOfAnswers="4">
+          <answer>ליד הכותל מיד עם כיבושו</answer>
+          <answer>ברגע שבו הגיעו חיילנו לתעלת סועץ בשנית</answer>
+          <answer>סמוך לבית הכנסת החורבה ברובע היהודי עם כיבושו</answer>
+          <answer>בסמוך לבית הספר לשוטרים עם תום קרב "גבעת התחמושת"</answer>
+        </answers>
+      </question>
+      <question id="6">
+        <questionText>במלחמת סיני, מבצע קדש היה שיתוף פעולה מלא בין ישראל לבין</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer>צרפת ובריטניה</answer>
+          <answer>uploadedFiles/imageNewName20_10_18-19_35_20.png</answer>
+          <answer>uploadedFiles/imageNewName20_10_18-19_35_30.png</answer>
+          <answer>גרמניה ובריטניה</answer>
+        </answers>
+      </question>
+      <question id="7">
+        <questionText>באיזה שנה התקיימה מלחמת יום כיפור?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="2">
+          <answer>1973</answer>
+          <answer>1963</answer>
+        </answers>
+      </question>
+      <question id="8">
+        <questionText>מי היה שר הביטחון במלחמת לבנון השנייה?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="3">
+          <answer>עמיר פרץ</answer>
+          <answer>עזר ויצמן</answer>
+          <answer>יצחק שמיר</answer>
+        </answers>
+      </question>
+      <question id="9">
+        <questionText>"הקו הירוק" נקבע לאחר:</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer>מלחמת העצמאות</answer>
+          <answer>מלחמת יום כיפור</answer>
+          <answer>מלחמת ששת הימים</answer>
+          <answer>הסכמי "קמפ דוד"</answer>
+        </answers>
+      </question>
+      <question id="10">
+        <questionText>מי אמר: "הר הבית בידנו"?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer>מוטה גור במלחמת ששת הימים</answer>
+          <answer>בן גוריון עם הכרזת המדינה</answer>
+          <answer>משה דיין במלחמת ששת הימים</answer>
+          <answer>עוזי נרקיס במלחמת ששת הימים</answer>
+        </answers>
+      </question>
+      <question id="11">
+        <questionText>מטרת "מבצע נחשון" במלחמת השחרור הייתה:</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="3">
+          <answer>פתיחת הדרך לירושלים</answer>
+          <answer>שחרור רמלה ולוד</answer>
+          <answer>פינוי אוכלוסיה יהודית בגוש עציון</answer>
+        </answers>
+      </question>
+    </questions>
+  </topic>
+  <topic id="2" NumOfQuestions="10" GameCode="102" timePerQuest="30" isPublish="true">
+    <subject>דיסני</subject>
+    <questions>
+      <question id="1">
+        <questionText>מהו הקסם הראשון שמבצעת הפיה הסנדקית של סינדרלה, לפני יציאה לנשף?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="2">
+          <answer>שמלה כסופה עם נעלי זכוכית</answer>
+          <answer>הפיכת דלעת ובעלי חיים שונים לכרכרה עם סוסים, רכב ומשרת</answer>
+        </answers>
+      </question>
+      <question id="2">
+        <questionText>איך קוראים לאמא של סימבה ב"מלך האריות"?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer>סראבי</answer>
+          <answer>קאלה</answer>
+          <answer>נלה</answer>
+          <answer>שנזי</answer>
+        </answers>
+      </question>
+      <question id="3">
+        <questionText>מהו שמו של הילד בתמונה?</questionText>
+        <img>uploadedFiles/imageNewName20_10_18-19_22_10.PNG</img>
+        <answers NumOfAnswers="4">
+          <answer>אנדי</answer>
+          <answer>כריס</answer>
+          <answer>לוגאן</answer>
+          <answer>רודי</answer>
+        </answers>
+      </question>
+      <question id="4">
+        <questionText>מהו הסרט הראשון באורך מלא של דיסני?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer>uploadedFiles/imageNewName20_10_18-19_24_10.png</answer>
+          <answer>uploadedFiles/imageNewName20_10_18-19_24_18.png</answer>
+          <answer>uploadedFiles/imageNewName20_10_18-19_24_22.png</answer>
+          <answer>uploadedFiles/imageNewName20_10_18-19_24_25.jpg</answer>
+        </answers>
+      </question>
+      <question id="5">
+        <questionText>מהם שמותיהם של הגמדים מ"שלגיה ושבעת הגמדים"?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer>דוק, אפצ'י, עליזי, ביישני, רטנוני, ישנוני, שטיא</answer>
+          <answer>דאגני, גמדוני, אפצ'י, ביישני, קנטרני, שקטוני, ישנוני</answer>
+          <answer>ישנוני, קנטרני, עליזי, דוק, אפצ'י, שקטני, ביישני</answer>
+          <answer>ישנוני, עליזי, מופנמי, אהובי, קנטרני, חפרני, דוק</answer>
+        </answers>
+      </question>
+      <question id="6">
+        <questionText>מי אמר: "אין צדק בחיים, נכון? אתה מבין, אני לעולם לא אהיה מלך ואתה, לא תזכה לראות את המחר. עצוב!"</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer>סקאר</answer>
+          <answer>מופסה</answer>
+          <answer>סימבה</answer>
+          <answer>רפיקי</answer>
+        </answers>
+      </question>
+      <question id="7">
+        <questionText>את מי בלע מונסטרו הלוויתן בפינוקיו?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="3">
+          <answer>uploadedFiles/imageNewName20_10_18-19_28_19.jpg</answer>
+          <answer>פינוקיו וג'ימיני</answer>
+          <answer>פינוקיו וג'פטו</answer>
+        </answers>
+      </question>
+      <question id="8">
+        <questionText>בסרט היפה והחיה - לאיזה חלק בארמון החיה אסרה על בל להיכנס?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="3">
+          <answer>לאגף השמאלי</answer>
+          <answer>לאגף הימני</answer>
+          <answer>לספריה</answer>
+        </answers>
+      </question>
+      <question id="9">
+        <questionText>מה המשמעות של המוטו של טימון ופומבה ממלך האריות: "אקונה מטטה"?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="2">
+          <answer>אל תדאג</answer>
+          <answer>אל תסבול</answer>
+        </answers>
+      </question>
+      <question id="10">
+        <questionText>מי מספר בסרט את עלילתו של פיטר פן?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer>וונדי</answer>
+          <answer>מייקל</answer>
+          <answer>פיטר</answer>
+          <answer>ג'ון</answer>
+        </answers>
+      </question>
+    </questions>
+  </topic>
+  <topic id="3" NumOfQuestions="5" GameCode="103" timePerQuest="30" isPublish="true">
+    <subject>דיסני</subject>
+    <questions>
+      <question id="1">
+        <questionText>מהו הקסם הראשון שמבצעת הפיה הסנדקית של סינדרלה, לפני יציאה לנשף?</questionText>
+        <img>
+        </img>
+
+        <answers NumOfAnswers="2">
+          <answer>שמלה כסופה עם נעלי זכוכית</answer>
+          <answer>הפיכת דלעת ובעלי חיים שונים לכרכרה עם סוסים, רכב ומשרת</answer>
+        </answers>
+      </question>
+      <question id="2">
+        <questionText>איך קוראים לאמא של סימבה ב"מלך האריות"?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer>סראבי</answer>
+          <answer>קאלה</answer>
+          <answer>נלה</answer>
+          <answer>שנזי</answer>
+        </answers>
+      </question>
+      <question id="3">
+        <questionText>מהו שמו של הילד בתמונה?</questionText>
+        <img>uploadedFiles/imageNewName20_10_18-19_22_10.png</img>
+        <answers NumOfAnswers="4">
+          <answer>אנדי</answer>
+          <answer>כריס</answer>
+          <answer>לוגאן</answer>
+          <answer>רודי</answer>
+        </answers>
+      </question>
+      <question id="4">
+        <questionText>מהו הסרט הראשון באורך מלא של דיסני?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer>uploadedFiles/imageNewName20_10_18-19_24_10.png</answer>
+          <answer>uploadedFiles/imageNewName20_10_18-19_24_18.png</answer>
+          <answer>uploadedFiles/imageNewName20_10_18-19_24_22.png</answer>
+          <answer>uploadedFiles/imageNewName20_10_18-19_24_25.jpg</answer>
+        </answers>
+      </question>
+      <question id="5">
+        <questionText>את מי בלע מונסטרו הלוויתן בפינוקיו?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="3">
+          <answer>uploadedFiles/imageNewName20_10_18-19_28_19.jpg</answer>
+          <answer>פינוקיו וג'ימיני</answer>
+          <answer>פינוקיו וג'פטו</answer>
+        </answers>
+      </question>
+    </questions>
+  </topic>
+</quizTree>

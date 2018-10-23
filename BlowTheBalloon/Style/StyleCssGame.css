@@ -1,0 +1,275 @@
+﻿body {
+    font-family:Arial;
+}
+
+#GridViewDiv{
+height: 500px;
+overflow-y: scroll;
+direction: ltr;
+}
+
+.GridViewHeader{
+direction: rtl;
+float: right;
+}
+
+/*מצבי כפתור*/
+.enjoy-css {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  background-color:white;
+  box-sizing: content-box;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 2px solid rgb(0, 164, 246);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font: normal 16px/16px "Advent Pro", Helvetica, sans-serif;
+  font-weight:bold;
+  color: white;
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  background: rgb(0, 164, 246);
+}
+
+.enjoy-css:hover {
+  background-color:white;
+  color: rgb(0, 164, 246);
+}
+
+.enjoy-css:active {
+  border: 2px solid rgba(0, 164, 246,1);
+  background: rgba(0, 164, 246,1);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  color:white;
+}
+
+.enjoy-css[disabled]{
+
+  color: rgba(170,170,170,1);
+  background-color:white;
+  border: 2px solid rgba(170,170,170,1);
+  cursor:default;
+}
+/*עד כאן מצבי כפתור*/
+
+/*----------------כפתורי בחירת מס שאלות-----------------*/
+
+.chooseBtn {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 2px solid rgb(0, 164, 246);
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  font: normal 20px/20px "Arial", Helvetica, sans-serif;
+  color: rgb(0, 164, 246);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  background: rgba(0,0,0,0);
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+}
+
+.chooseBtn:hover {
+  color: rgba(255,255,255,1);
+  background: rgb(0, 164, 246);
+}
+
+.chooseBtn:active {
+  border: 2px solid rgba(0, 164, 246,1);
+  background: rgba(0, 164, 246,1);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.chooseBtnVisited {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 2px solid rgba(0, 164, 246,1);
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  font: normal 20px/20px "Arial", Helvetica, sans-serif;
+  color: white;
+  background: rgb(0, 164, 246);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+}
+/*----------------עד כאן כפתורי בחירת מס שאלות-----------------*/
+
+/*ToolTip start here*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+    
+/*--------------------------עד כאן TOOLTIP------------------------ */
+
+
+td.listOfQ{  
+   /*מצמיד את השאלות למעלה*/
+    vertical-align: top;
+}
+
+.Qtable > tbody > tr:hover { 
+/*מעבר עכבר על גזעי שאלות*/
+    border: 1px solid black;
+    background-color: rgba(170,170,170,0.5);
+}
+
+.Qtable > tbody > tr {
+    max-height:10px;
+
+}
+.Qtable{
+
+outline-width:thin;
+direction: rtl;
+float: right;
+
+}
+tr{
+border:none;
+}
+
+
+.Qbtn{
+/*מראה את רשימת השאלות לא ככפתורים*/
+ border: 0;
+ background: none;
+ box-shadow: none;
+ border-radius: 0px;
+ padding:10px;
+ width: 100%;
+ text-align: right;
+}
+
+#btnFinishEdit{
+/*כפתור סיום עריכה*/
+    margin-top:20px;
+    margin-right:130px;
+
+}
+
+/*חלון פופ אפ*/
+
+/*הגדרות לחלון האפור*/
+#grayWindows {
+    background-color: rgba(87, 86, 93, 0.7);
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*הגדרות לחלון הפופ-אפ*/
+.PopUp {
+    position: absolute;
+    width: 300px;
+    background-color: white;
+
+    /*הגדרות שיגרמו לחלון תמיד להיות באמצע המסך*/
+    /*top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+}
+
+/*הגדרות לתמונה*/
+#BigImage {
+    width: 200px;
+    height: 200px;
+}
+
+
+/*---------------------עד כאן חלון פופ אפ------------------*/
+
+
+/*כותרת קבועה*/
+    #LoginPanel {
+        padding-top: 120px;
+        margin: auto;
+        width: 35%;
+    }
+    #topPanel{
+    margin-top: -8px;
+    margin-right: -8px;
+    background-color: #CEEDFD;
+    width: 98.5vw;
+    }
+    .HeaderBtn{
+
+    font-weight:bold;
+    background-color: #CEEDFD;
+    border: 0;
+
+    }
+
+    /*עמוד וידיאו*/
+    #CenterVideo{
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+    #VideoBody{
+     background-color: rgba(56,56,56,0.8);
+    }
+
+

@@ -1,0 +1,11 @@
+input#gameCode_txt {
+    font-size: 30pt;
+    text-align: center;
+}
+canvas#canvas {
+   max-height: 100%;
+   cursor: none;
+}
+body {
+    direction: rtl;
+}

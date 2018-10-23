@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<quizTree>
+  <!--NumOfGames is like ID in SQL.. No Number will be twice-->
+  <NumOfGames>24</NumOfGames>
+  <topic id="1" NumOfQuestions="14" GameCode="101" timePerQuest="30" isPublish="True">
+    <subject>מלחמות ישראל</subject>
+    <questions>
+      <question id="1">
+        <questionText>שאלה 1</questionText>
+        <guide>פוצץ את הבלון המתאים</guide>
+        <img>
+        </img>
+        <answers NumOfAnswers="2">
+          <answer feedback="true" AnsType="text">תשובה 1 שאלה 1</answer>
+          <answer feedback="false" AnsType="text">תשובה 2 שאלה 1</answer>
+        </answers>
+      </question>
+      <question id="2">
+        <questionText>שאלה 2 - תמונה</questionText>
+        <guide>פוצץ את הבלון המתאים</guide>
+        <img>uploadedFiles/imageNewName30_09_18-15_51_52.jpg</img>
+        <answers NumOfAnswers="2">
+          <answer feedback="true" AnsType="text">תשובה 1 שאלה 2</answer>
+          <answer feedback="false" AnsType="text">תשובה 2 שאלה 2</answer>
+        </answers>
+      </question>
+      <question id="3">
+        <questionText>שאלה 3 - הכל תמונות</questionText>
+        <guide>פוצץ את הבלון המתאים</guide>
+        <img>uploadedFiles/imageNewName30_09_18-15_53_06.png</img>
+        <answers NumOfAnswers="4">
+          <answer feedback="true" AnsType="text">uploadedFiles/imageNewName30_09_18-15_53_12.png</answer>
+          <answer feedback="false" AnsType="text">uploadedFiles/imageNewName30_09_18-15_53_21.jpg</answer>
+          <answer feedback="false" AnsType="text">uploadedFiles/imageNewName30_09_18-15_53_34.png</answer>
+          <answer feedback="false" AnsType="text">uploadedFiles/imageNewName30_09_18-15_53_53.png</answer>
+        </answers>
+      </question>
+      <question id="4">
+        <questionText>שאלה 4 - תמונות</questionText>
+        <guide>פוצץ את הבלון המתאים\n לחץ על כפתור הגדל להגדלת התמונה</guide>
+        <img>uploadedFiles/imageNewName30_09_18-15_55_04.png</img>
+        <answers NumOfAnswers="3">
+          <answer feedback="true" AnsType="text">uploadedFiles/imageNewName30_09_18-15_54_58.jpg</answer>
+          <answer feedback="false" AnsType="text">uploadedFiles/imageNewName30_09_18-15_55_08.png</answer>
+          <answer feedback="false" AnsType="text">טימון זה התשובה הנכונה</answer>
+        </answers>
+      </question>
+      <question id="5">
+        <questionText>במלחמת סיני, מבצע קדש \n ...היה שיתוף פעולה בין ישראל לבין</questionText>
+        <guide>פוצץ את הבלון המתאים\n לחץ על כפתור הגדל להגדלת התמונה</guide>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer feedback="true" AnsType="text">צרפת ובריטניה</answer>
+          <answer feedback="false" AnsType="text">גרמניה ובריטניה</answer>
+          <answer feedback="false" AnsType="image">canadaBelgia.jpg</answer>
+          <answer feedback="false" AnsType="image">UsaCanada.png</answer>
+        </answers>
+      </question>
+      <question id="6">
+        <questionText>hnbvghffhg</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="3">
+          <answer feedback="true" AnsType="text">rabin.pngggg</answer>
+          <answer feedback="false" AnsType="text">מבצע עמוד ענן</answer>
+          <answer feedback="false" AnsType="text">מבצע גשמי קיץ</answer>
+        </answers>
+      </question>
+      <question id="7">
+        <questionText>מהו המבצע שהחל כתגובה ל''מבצע שובו אחים'' של צה''ל\n ?לאחר חטיפת שלושת הנערים ב- 12 ביוני</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="2">
+          <answer feedback="true" AnsType="text">מבצע צוק איתן?</answer>
+          <answer feedback="false" AnsType="text">מבצע עמוד ענן</answer>
+        </answers>
+      </question>
+      <question id="8">
+        <questionText>במלחמת סיני, מבצע קדש \n ...היה שיתוף פעולה בין ישראל לבין</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer feedback="true" AnsType="text">צרפת ובריטניה</answer>
+          <answer feedback="false" AnsType="text">גרמניה ובריטניה</answer>
+          <answer feedback="false" AnsType="text">canadaBelgia.jpg</answer>
+          <answer feedback="false" AnsType="text">UsaCanada.png</answer>
+        </answers>
+      </question>
+      <question id="9">
+        <questionText>היכן צולמה התמונה הבאה, ביוני 1967?</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer feedback="true" AnsType="text">ליד הכותל מיד עם כיבושו</answer>
+          <answer feedback="false" AnsType="text">ברגע שבו הגיעו חיילנו לתעלת סועץ בשנית</answer>
+          <answer feedback="false" AnsType="text">סמוך לבית כנסת החורבה ברובע היהודי עם כיבושו</answer>
+          <answer feedback="false" AnsType="text">בסמוך לבית ספר לשוטרים עם תום קרב גבעת התחמושת</answer>
+        </answers>
+      </question>
+      <question id="10">
+        <questionText>במלחמת סיני, מבצע קדש \n ...היה שיתוף פעולה בין ישראל לבין</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer feedback="true" AnsType="text">צרפת ובריטניה</answer>
+          <answer feedback="false" AnsType="text">גרמניה ובריטניה</answer>
+          <answer feedback="false" AnsType="text">canadaBelgia.jpg</answer>
+          <answer feedback="false" AnsType="text">UsaCanada.png</answer>
+        </answers>
+      </question>
+      <question id="11">
+        <questionText>hnbvghffhg</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="3">
+          <answer feedback="true" AnsType="text">rabin.pngggg</answer>
+          <answer feedback="false" AnsType="text">מבצע עמוד ענן</answer>
+          <answer feedback="false" AnsType="text">מבצע גשמי קיץ</answer>
+        </answers>
+      </question>
+      <question id="12">
+        <questionText>מהו שמו של הילד בתמונהיחחיןןןןןןןן</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer feedback="true" AnsType="text">rabin.pnggggKKKK</answer>
+          <answer feedback="false" AnsType="text">תשובה שגויה 2</answer>
+          <answer feedback="false" AnsType="text">canadaBelgia.jpg</answer>
+          <answer feedback="false" AnsType="text">barak.png</answer>
+        </answers>
+      </question>
+      <question id="13">
+        <questionText>מהו שמו של הילד בתמונהיחחיןןןןןןןן</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="2">
+          <answer feedback="true" AnsType="text">rabin.png</answer>
+          <answer feedback="false" AnsType="text">hkjjkj</answer>
+        </answers>
+      </question>
+      <question id="14">
+        <questionText>nfkjkfg</questionText>
+        <img>uploadedFiles/imageNewName03_10_18-22_45_13.jpg</img>
+        <answers NumOfAnswers="3">
+          <answer feedback="true" AnsType="text">uploadedFiles/imageNewName03_10_18-22_45_16.png</answer>
+          <answer feedback="false" AnsType="text">navu navu</answer>
+          <answer feedback="false" AnsType="text">uploadedFiles/imageNewName03_10_18-22_45_45.png</answer>
+        </answers>
+      </question>
+    </questions>
+  </topic>
+  <topic id="2" NumOfQuestions="9" GameCode="102" timePerQuest="30" isPublish="false">
+    <subject>דיסני</subject>
+    <questions>
+      <question id="1">
+        <questionText>מהו הקסם הראשון שמבצעת הפיה הסנדקית של סינדרלה\n ?לפני יציאתה לנשף</questionText>
+        <guide>פוצץ את הבלון המתאים</guide>
+        <img>
+        </img>
+        <answers NumOfAnswers="2">
+          <answer feedback="true" AnsType="text">יצירת שמלה כסופה \n ונעלי זכוכית</answer>
+          <answer feedback="false" AnsType="text">הפיכת דלעת ובעלי חיים \n שונים לכרכרה עם סוסים רכב ומשרת</answer>
+        </answers>
+      </question>
+      <question id="2">
+        <questionText>מהו שמו של הילד בתמונהיחחיןןןןןןןן</questionText>
+        <guide>פוצץ את הבלון המתאים</guide>
+        <img>andy.png</img>
+        <answers NumOfAnswers="4">
+          <answer feedback="true" AnsType="text">אנדי</answer>
+          <answer feedback="false" AnsType="text">כריסxx</answer>
+          <answer feedback="false" AnsType="text">לוגאןןןןןן</answer>
+          <answer feedback="false" AnsType="text">רודי</answer>
+        </answers>
+      </question>
+      <question id="3">
+        <questionText>?מהו הסרט הראשון באורך מלא של דיסני</questionText>
+        <guide>פוצץ את הבלון המתאים\n לחץ על כפתור הגדל להגדלת התמונה</guide>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer feedback="true" AnsType="image">cinderela.png</answer>
+          <answer feedback="false" AnsType="image">Shrek.png</answer>
+          <answer feedback="false" AnsType="image">lionKing.png</answer>
+          <answer feedback="false" AnsType="image">RobinHod.jpg</answer>
+        </answers>
+      </question>
+      <question id="4">
+        <questionText>:מי אמר את המשפט הבא\n.אין צדק בחיים, נכון? אתה מבין,ואתה... לא תזכה לראות את המחר. עצוב</questionText>
+        <guide>פוצץ את הבלון המתאים</guide>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer>סקאר</answer>
+          <answer>מופסה</answer>
+          <answer>סימבה</answer>
+          <answer>רפיקי</answer>
+        </answers>
+      </question>
+      <question id="5">
+        <questionText>שאלה חדששבה </questionText>
+        <img>uploadedFiles/imageNewName06_10_18-22_43_18.png</img>
+        <answers NumOfAnswers="3">
+          <answer>תשובה נכונה</answer>
+          <answer>uploadedFiles/imageNewName06_10_18-22_43_32.jpg</answer>
+          <answer>uploadedFiles/imageNewName06_10_18-22_43_43.png</answer>
+        </answers>
+      </question>
+      <question id="6">
+        <questionText>בננבהנ גכעגכע גכעגכ</questionText>
+        <img>uploadedFiles/imageNewName06_10_18-22_49_28.jpg</img>
+        <answers NumOfAnswers="3">
+          <answer>uploadedFiles/imageNewName06_10_18-22_49_17.png</answer>
+          <answer>uploadedFiles/imageNewName06_10_18-22_49_21.png</answer>
+          <answer>uploadedFiles/imageNewName06_10_18-22_49_24.jpg</answer>
+        </answers>
+      </question>
+      <question id="7">
+        <questionText>מהו שמו של הילד בתמונהיחחיןןןןןןןן</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="3">
+          <answer>תשובה נכונה</answer>
+          <answer>Mota.png</answer>
+          <answer>מבצע גשמי קיץ</answer>
+        </answers>
+      </question>
+      <question id="8">
+        <questionText>שאלה חדשה אקס אמ אל מקוצר</questionText>
+        <img>
+        </img>
+        <answers NumOfAnswers="4">
+          <answer>rabin.png</answer>
+          <answer>Mota.png</answer>
+          <answer>uploadedFiles/imageNewName08_10_18-20_37_14.jpg</answer>
+          <answer>uploadedFiles/imageNewName08_10_18-20_37_22.jpg</answer>
+        </answers>
+      </question>
+      <question id="9">
+        <questionText>עוד שאלה חדשה</questionText>
+        <img>uploadedFiles/imageNewName08_10_18-20_37_49.jpg</img>
+        <answers NumOfAnswers="3">
+          <answer>uploadedFiles/imageNewName08_10_18-20_37_54.png</answer>
+          <answer>לחל</answer>
+          <answer>uploadedFiles/imageNewName08_10_18-20_38_02.jpg</answer>
+        </answers>
+      </question>
+    </questions>
+  </topic>
+  <topic id="3" NumOfQuestions="3" GameCode="103" timePerQuest="30" isPublish="false">
+    <subject>מלחמות אמריקה</subject>
+    <questions>
+      <question id="1">
+        <questionText>שאלה שהתשובה שלה היא וויאטנם</questionText>
+        <answers NumOfAnswers="2">
+          <answer feedback="true" AnsType="text">תשובה 1</answer>
+          <answer feedback="true" AnsType="text">תשובה 2</answer>
+        </answers>
+      </question>
+      <question id="2">
+        <questionText>?היכן צולמה התמונה הבאה, ביוני 1967</questionText>
+        <answers NumOfAnswers="4">
+          <answer feedback="true" AnsType="text">ליד הכותל מיד עם כיבושו</answer>
+          <answer feedback="false" AnsType="text">ברגע ש</answer>
+          <answer feedback="false" AnsType="text">סמוךכיבושו</answer>
+          <answer feedback="false" AnsType="text">בסמוך לבית ספמושת</answer>
+        </answers>
+      </question>
+      <question id="3">
+        <questionText>?היכן צולמה התמונה הבאה, ביוני 1967</questionText>
+        <answers NumOfAnswers="4">
+          <answer feedback="true" AnsType="text">ליד הכותל מיד עם כיבושו</answer>
+          <answer feedback="false" AnsType="text">ברגע ש</answer>
+          <answer feedback="false" AnsType="text">סמוךכיבושו</answer>
+          <answer feedback="false" AnsType="text">בסמוך לבית ספמושת</answer>
+        </answers>
+      </question>
+    </questions>
+  </topic>
+  <topic id="4" NumOfQuestions="0" GameCode="104" timePerQuest="30" isPublish="false">
+    <subject>יחל</subject>
+  </topic>
+  <topic id="7" NumOfQuestions="0" GameCode="109" timePerQuest="30" isPublish="false">
+    <subject>hjh</subject>
+  </topic>
+  <topic id="10" NumOfQuestions="0" GameCode="112" timePerQuest="30" isPublish="false">
+    <subject>hjhjhjjhjk</subject>
+  </topic>
+  <topic id="13" NumOfQuestions="0" GameCode="115" timePerQuest="30" isPublish="false">
+    <subject>hjhjhjjhjkhjkhjkjk</subject>
+  </topic>
+  <topic id="18" NumOfQuestions="0" GameCode="120" timePerQuest="30" isPublish="false">
+    <subject>hkjhkhkjhkjjhjkhj</subject>
+  </topic>
+  <topic id="19" NumOfQuestions="0" GameCode="121" timePerQuest="30" isPublish="false">
+    <subject>הנמהנמ</subject>
+  </topic>
+  <topic id="20" NumOfQuestions="0" GameCode="122" timePerQuest="30" isPublish="false">
+    <subject>נהמההאקרקק</subject>
+  </topic>
+  <topic id="21" NumOfQuestions="0" GameCode="123" timePerQuest="30" isPublish="false">
+    <subject>cbcvxcv</subject>
+  </topic>
+  <topic id="22" NumOfQuestions="0" GameCode="124" timePerQuest="30" isPublish="false">
+    <subject>fdgdfgdfg</subject>
+  </topic>
+  <topic id="23" NumOfQuestions="0" GameCode="125" timePerQuest="30" isPublish="false">
+    <subject>dfgeryilkjnbdf</subject>
+  </topic>
+  <topic id="24" NumOfQuestions="0" GameCode="126" timePerQuest="30" isPublish="false">
+    <subject>נמכעמכעיכע</subject>
+  </topic>
+</quizTree>
