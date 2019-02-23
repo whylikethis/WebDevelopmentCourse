@@ -48,8 +48,8 @@ span.aboutImgs span {
 
 .about-container img {
     border-radius: 50%;
-    margin: 25px;
-    zoom:0.9;
+    margin: 20px;
+    zoom: 0.8;
 }
 
 .gruopTitle {
@@ -58,7 +58,7 @@ span.aboutImgs span {
     font-size: 20px;
 }
 
-.about-container p {
+.marginRightTxt {
     margin-right: 20px;
 }
 
