@@ -84,3 +84,31 @@ function enterGame() { //כדי לעבור את עמוד השער יש להזי�
         $('.wrongEnterCode').show(1000);
     }
 }
+
+
+
+
+//החלפת מצלמות
+var CountCameras = 0;
+function changeCams() {
+
+    Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+            
+            alert("u have " + cameras.length + " cams on your divice. CountCameras: " + CountCameras);
+            if (cameras.length >= CountCameras) {
+                alert("im in if");
+                scanner.start(cameras[CountCameras++]);
+            }
+            else {
+                alert("im in else");
+                scanner.start(cameras[0]);
+            }
+            
+        } else {
+            console.error('No cameras found.');
+        }
+    }).catch(function (e) {
+        console.error(e);
+    });
+}
