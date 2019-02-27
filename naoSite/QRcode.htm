@@ -110,9 +110,10 @@
                 if (cameras.length > 0) {
 
                     alert("u have " + cameras.length + " cams on your divice. CountCameras: " + CountCameras);
+                    CountCameras++;
                     if (cameras.length > CountCameras) {
                         alert("im in if");
-                        scanner.start(cameras[++CountCameras]);
+                        scanner.start(cameras[CountCameras]);
                     }
                     else {
                         alert("im in else");
