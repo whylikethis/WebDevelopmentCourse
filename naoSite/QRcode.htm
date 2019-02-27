@@ -55,7 +55,7 @@
 
         <div class="about-container">
             <p class="marginRightTxt">
-               3 -  סרוק את הקוד
+               4 -  סרוק את הקוד
             </p>
 
             <input id="Button1" onclick="changeCams1();" type="button" value="החלף מצלמה" />
@@ -104,8 +104,8 @@
 
         //החלפת מצלמות
         var CountCameras = 0;
-        function changeCams() {
-
+        function changeCams1() {
+alert("im here");
             Instascan.Camera.getCameras().then(function (cameras) {
                 if (cameras.length > 0) {
 
