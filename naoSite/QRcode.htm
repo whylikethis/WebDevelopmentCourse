@@ -55,7 +55,7 @@
 
         <div class="about-container">
             <p class="marginRightTxt">
-               5 -  סרוק את הקוד
+               6 -  סרוק את הקוד
             </p>
 
             <input id="Button1" onclick="changeCams1();" type="button" value="החלף מצלמה" />
@@ -110,7 +110,7 @@
                 if (cameras.length > 0) {
 
                     alert("u have " + cameras.length + " cams on your divice. CountCameras: " + CountCameras);
-                    if (cameras.length >= CountCameras) {
+                    if (cameras.length > CountCameras) {
                         alert("im in if");
                         scanner.start(cameras[++CountCameras]);
                     }
