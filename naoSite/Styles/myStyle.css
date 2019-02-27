@@ -5,6 +5,9 @@
     background-color: #334d99 !important;
     margin-bottom: 10px;
 }
+h2 {
+    font-size: 20pt;
+}
 
 /*#region NavStyle */
 .ActiveNav {
@@ -60,7 +63,6 @@ span.aboutImgs span {
 
 .marginRightTxt {
     margin-right: 20px;
-    color:red;
 }
 
 
@@ -68,7 +70,7 @@ span.aboutImgs span {
 
 
 
-.bunWhyUs {
+.btnWhyUs {
     display: inline-block;
     border-radius: 30px;
     background-color: white;
@@ -82,17 +84,17 @@ span.aboutImgs span {
     margin: 5px;
 }
 
-    .bunWhyUs:hover {
+    .btnWhyUs:hover {
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     }
-    .bunWhyUs span {
+    .btnWhyUs span {
         cursor: pointer;
         display: inline-block;
         position: relative;
         transition: 0.5s;
     }
 
-        .bunWhyUs span:after {
+        .btnWhyUs span:after {
             content: '\00bb';
             position: absolute;
             opacity: 0;
@@ -101,11 +103,140 @@ span.aboutImgs span {
             transition: 0.5s;
         }
 
-    .bunWhyUs:hover span {
+    .btnWhyUs:hover span {
         /*padding-left: 10px;*/
     }
 
-        .bunWhyUs:hover span:after {
+        .btnWhyUs:hover span:after {
             opacity: 1;
             left: -15px;
         }
+
+
+#codeTxt{
+    margin:3px;
+}
+
+.wrongEnterCode {
+    /*color:red;*/
+    display: none;
+}
+.rightEnterCode {
+    /*color: green;*/
+    display: none;
+}
+
+.imgRnd {
+    zoom: 0.3;
+    margin: 15px;
+    background: linear-gradient(to right, #4aceedb3, #2129b9);
+    padding: 2vh;
+    max-width: 380px;
+    max-height: 380px;
+    min-width: 290px;
+    min-height: 250px;
+}
+#imgWrapper{
+    text-align:center;
+}
+/*#region Image Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    #myImg:hover {
+        opacity: 0.7;
+    }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.1)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+    /*#endregion Image Modal */
