@@ -20,7 +20,7 @@
      <!--Scripts--> 
     <script src="jScripts/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="jScripts/instascan.min.js" type="text/javascript"></script>
-    <script src="jScripts/JavaScript.js" type="text/javascript"></script>
+
 
 </head>
 <body>
@@ -58,6 +58,8 @@
                 סרוק את הקוד
             </p>
 
+            <input id="Button1" onclick="changeCams();" type="button" value="החלף מצלמה" />
+
             <br>
 
 
@@ -65,29 +67,38 @@
         </div>
     </div>
 
-    <video id="preview" style="border:1px solid black"></video>
+    <video id="preview" style="border:1px solid black;width: 100%;"></video>
 
     <script>
 
-        let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
-
-        scanner.addListener('scan', function (content) {
-            console.log(content);
-            alert(content);
-            window.open(content, "_blank");
-        });
-
-        Instascan.Camera.getCameras().then(function (cameras)
-        {
-            if (cameras.length > 0) {
-                scanner.start(cameras[0]);
-            } else {
-                console.error('No cameras found.');
-            }
-        }).catch(function (e) {
-            console.error(e);
-        });
     </script>
 
+
+    <script src="jScripts/JavaScript.js" type="text/javascript"></script>
+    <footer onload="startScanQR();"></footer>
+
+    <script>
+        //סריקת קוד QR
+            let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+
+            scanner.addListener('scan', function (content) {
+                console.log(content);
+                alert(content);
+                window.open(content, "_blank");
+            });
+
+            Instascan.Camera.getCameras().then(function (cameras) {
+                if (cameras.length > 0) {
+                    scanner.start(cameras[0]);
+                } else {
+                    console.error('No cameras found.');
+                }
+            }).catch(function (e) {
+                console.error(e);
+            });
+        
+
+    </script>
 </body>
+
 </html>
