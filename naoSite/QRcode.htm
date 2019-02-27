@@ -24,7 +24,7 @@
 
 </head>
 <body>
-    <!--<nav>
+    <nav>
         <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none" id="mySidebar">
             <button class="w3-bar-item w3-button w3-large NavHeader"
                     onclick="w3_close()">
@@ -63,9 +63,10 @@
 
 
         </div>
-    </div>-->
+    </div>
 
-    <video id="preview"></video>
+    <video id="preview" style="border:1px solid black"></video>
+
     <script>
 
         let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
