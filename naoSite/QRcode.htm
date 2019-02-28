@@ -48,7 +48,7 @@
 
         <div class="about-container">
             <p class="marginRightTxt">
-                11 -  סרוק את הקוד
+                12 -  סרוק את הקוד
             </p>
 
             <img src="images/camSwich.jpg" id="camSwichIcon" onclick="changeCams1();"  />
@@ -62,37 +62,27 @@
 
 
     <script>
+        let scanner = new Instascan.Scanner({ video: document.getElementById('QrPreview') });
 
+        scanner.addListener('scan', function (content) {
+            console.log(content);
+            alert(content);
+            window.open(content, "_blank");
+        });
+
+        Instascan.Camera.getCameras().then(function (cameras) {
+            if (cameras.length > 0) {
+                scanner.start(cameras[0]);
+            } else {
+                console.error('No cameras found.');
+            }
+        }).catch(function (e) {
+            console.error(e);
+        });
 
     </script>
 
     <script>
-
-        $('.qrPage').ready(function startScanQR() {
-            //סריקת קוד QR
-            let scanner = new Instascan.Scanner({ video: document.getElementById('QrPreview') });
-
-            scanner.addListener('scan', function (content) {
-                console.log(content);
-                alert(content);
-                window.open(content, "_blank");
-            });
-
-            Instascan.Camera.getCameras().then(function (cameras) {
-                if (cameras.length > 0) {
-                    scanner.start(cameras[0]);
-                } else {
-                    console.error('No cameras found.');
-                }
-            }).catch(function (e) {
-                console.error(e);
-            });
-
-
-        });
-
-
-
         //החלפת מצלמות
         var CountCameras = 0;
         function changeCams1() {
