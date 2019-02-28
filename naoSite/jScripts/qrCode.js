@@ -1,1 +1,23 @@
 ﻿
+$('.qrPage').ready(function startScanQR() {
+    //סריקת קוד QR
+    let scanner = new Instascan.Scanner({ video: document.getElementById('QrPreview') });
+
+    scanner.addListener('scan', function (content) {
+        console.log(content);
+        alert(content);
+        window.open(content, "_blank");
+    });
+
+    Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+            scanner.start(cameras[0]);
+        } else {
+            console.error('No cameras found.');
+        }
+    }).catch(function (e) {
+        console.error(e);
+    });
+
+
+});
