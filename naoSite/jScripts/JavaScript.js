@@ -86,25 +86,48 @@ function enterGame() { //כדי לעבור את עמוד השער יש להזי�
 }
 
 
+$('.qrPage').ready(function startScanQR() {
+    //סריקת קוד QR
+    let scanner = new Instascan.Scanner({ video: document.getElementById('QrPreview') });
 
-
-//החלפת מצלמות
-var CountCameras = 0;
-function changeCams() {
+    scanner.addListener('scan', function (content) {
+        console.log(content);
+        alert(content);
+        window.open(content, "_blank");
+    });
 
     Instascan.Camera.getCameras().then(function (cameras) {
         if (cameras.length > 0) {
-            
+            scanner.start(cameras[0]);
+        } else {
+            console.error('No cameras found.');
+        }
+    }).catch(function (e) {
+        console.error(e);
+    });
+
+
+});
+
+//החלפת מצלמות
+var CountCameras = 0;
+function changeCams1() {
+    //alert("im here");
+    Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+
             alert("u have " + cameras.length + " cams on your divice. CountCameras: " + CountCameras);
-            if (cameras.length >= CountCameras) {
+            CountCameras++;
+            if (cameras.length > CountCameras) {
                 alert("im in if");
-                scanner.start(cameras[CountCameras++]);
+                scanner.start(cameras[CountCameras]);
             }
             else {
                 alert("im in else");
                 scanner.start(cameras[0]);
+                CountCameras = 0;
             }
-            
+
         } else {
             console.error('No cameras found.');
         }
