@@ -13,11 +13,12 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
     <link href="Styles/myStyle.css" rel="stylesheet" type="text/css" />
+
     <!--Scripts-->
     <script src="jScripts/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="jScripts/instascan.min.js" type="text/javascript"></script>
+    <script src="jScripts/jquery.touchSwipe.min.js" type="text/javascript"></script>
     <script src="jScripts/JavaScript.js" type="text/javascript"></script>
 </head>
 <body class="qrPage">
@@ -29,12 +30,12 @@
             </button>
             <a href="index.htm" class="w3-bar-item w3-button RightText">עמוד הבית</a>
             <a href="whyus.htm" class="w3-bar-item w3-button RightText">למה אנחנו</a>
-            <a href="gate.htm" class="w3-bar-item w3-button RightText ActiveNav">שער כניסה</a>
+            <a href="gate.htm" class="w3-bar-item w3-button RightText">שער כניסה</a>
             <a href="about.htm" class="w3-bar-item w3-button RightText">אודות</a>
             <a href="QRcode.htm" class="w3-bar-item w3-button RightText ActiveNav">סרוק קוד</a>
             <a href="riddle2_545.htm" class="w3-bar-item w3-button RightText">חידה 2</a>
-            <a href="#" class="w3-bar-item w3-button RightText">חידה 3</a>
-            <a href="#" class="w3-bar-item w3-button RightText">חידה 4</a>
+            <a href="riddle3_497.htm" class="w3-bar-item w3-button RightText">חידה 3</a>
+            <a href="riddle4_834.htm" class="w3-bar-item w3-button RightText">חידה 4</a>
         </div>
     </nav>
 
@@ -48,7 +49,7 @@
 
         <div class="about-container">
             <p class="marginRightTxt">
-                14 -  סרוק את הקוד
+                15 -  סרוק את הקוד
             </p>
 
             <img src="images/camSwich.jpg" id="camSwichIcon" onclick="changeCams1();"  />
@@ -61,18 +62,18 @@
 
 
 
-    <script>
+    <script>//הפעלת המצלמה לצורך סריקת קוד
         let scanner = new Instascan.Scanner({ video: document.getElementById('QrPreview') });
 
         scanner.addListener('scan', function (content) {
             console.log(content);
-            alert(content);
-            window.open(content, "_blank");
+            alert("הקוד נסרק בהצלחה! <br/> מעביר לשלב הבא <br/> טיפ מנאו: רק עבודת צוות תציל את מצב");
+            window.open(content); //מעביר לעמוד שנסרק
         });
 
         Instascan.Camera.getCameras().then(function (cameras) {
             if (cameras.length > 0) {
-                scanner.start(cameras[0]);
+                scanner.start(cameras[0]); //מצלמת ברירת מחדל של המכשיר
             } else {
                 console.error('No cameras found.');
             }
@@ -86,26 +87,21 @@
         //החלפת מצלמות
         var CountCameras = 0;
         function changeCams1() {
-            //alert("im here");
             Instascan.Camera.getCameras().then(function (cameras) {
                 if (cameras.length > 0) {
-
-                    alert("u have " + cameras.length + " cams on your divice. CountCameras: " + CountCameras);
                     CountCameras++;
-                    if (cameras.length > CountCameras) {
-                        alert("im in if");
+                    if (cameras.length > CountCameras) { //מעביר בין המצלמות
                         scanner.start(cameras[CountCameras]);
                     }
                     else {
-                        alert("im in else");
-                        scanner.start(cameras[0]);
+                        scanner.start(cameras[0]); 
                         CountCameras = 0;
                     }
 
                 } else {
                     console.error('No cameras found.');
                 }
-            }).catch(function (e) {
+            }).catch(function (e) { //שגיאה כללית
                 console.error(e);
             });
         }

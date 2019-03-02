@@ -15,65 +15,94 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="Styles/myStyle.css" rel="stylesheet" type="text/css" />
     <!-- Scripts -->
+
     <script src="jScripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="jScripts/jquery.touchSwipe.min.js" type="text/javascript"></script>
     <script src="jScripts/JavaScript.js" type="text/javascript"></script>
+
+
 </head>
-<body>
+<body onload="loadPics();">
     <nav>
         <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none" id="mySidebar">
             <button class="w3-bar-item w3-button w3-large NavHeader"
                     onclick="w3_close()">
                 Nao Escap
             </button>
-            <a href="#" class="w3-bar-item w3-button RightText">עמוד הבית</a>
-            <a href="#" class="w3-bar-item w3-button RightText">למה אנחנו</a>
-            <a href="#" class="w3-bar-item w3-button RightText">שער כניסה</a>
-            <a href="#" class="w3-bar-item w3-button RightText">אודות</a>
-            <a href="#" class="w3-bar-item w3-button RightText">צור קשר</a>
-            <a href="#" class="w3-bar-item w3-button RightText">חידה 2</a>
-            <a href="#" class="w3-bar-item w3-button RightText">חידה 3</a>
-            <a href="#" class="w3-bar-item w3-button RightText">חידה 4</a>
+            <a href="index.htm" class="w3-bar-item w3-button RightText">עמוד הבית</a>
+            <a href="whyus.htm" class="w3-bar-item w3-button RightText">למה אנחנו</a>
+            <a href="gate.htm" class="w3-bar-item w3-button RightText">שער כניסה</a>
+            <a href="about.htm" class="w3-bar-item w3-button RightText">אודות</a>
+            <a href="QRcode.htm" class="w3-bar-item w3-button RightText">סרוק קוד</a>
+            <a href="riddle2_545.htm" class="w3-bar-item w3-button RightText ActiveNav">חידה 2</a>
+            <a href="riddle3_497.htm" class="w3-bar-item w3-button RightText">חידה 3</a>
+            <a href="riddle4_834.htm" class="w3-bar-item w3-button RightText">חידה 4</a>
         </div>
     </nav>
 
 
-    <div id="main">
-
-        <div class="w3-teal haederStyle" style="display:flex;">
-            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
-            <div class="w3-container">
-                <h1>עמוד הבית</h1>
-            </div>
-        </div>
 
 
-
-
-
-        <img src="../images/nao2.png" style="max-width: 100%;"/>
-
+    <div class="w3-teal haederStyle" style="display:flex;">
+        <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
         <div class="w3-container">
-            <p>
-                לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית קולהע צופעט למרקוח איבן איף, ברומץ כלרשט מיחוצים.
-                קלאצי סחטיר בלובק. תצטנפל בלינדו למרקל אס לכימפו, דול, 
-                צוט ומעיוט - לפתיעם ברשג - ולתיעם גדדיש. קוויז דומור ליאמום בלינך רוגצה. לפמעט
-            </p>
-            <p>
-                קולורס מונפרד אדנדום סילקוף, מרגשי ומרגשח. עמחליף קוואזי במר מודוף. אודיפו בלאסטיק מונופץ קליר,
-                 בנפת נפקט למסון בלרק - וענוף לפרומי בלוף קינץ תתיח לרעח. לת צשחמי צש בליא, 
-                מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק.
-            </p>
-
-</div>
+            <h1>חידה שניה</h1>
+        </div>
+    </div>
+    <div id="main">
+        <p class="startMsg">הראו לנאו את התמונה הנכונה, במידה יתקבל קוד הזינו אותו בתיבת הטקסט המופיעה בתחתית העמוד</p>
+    </div>
+    <p id="test" style="width:200px;height:200px; background-color:antiquewhite;">bla</p>
+    <div id="imgWrapper">
+        <!-- קונטיינר לתמונות הקטנות -->
+        <div id="imgdiv"></div>
     </div>
 
+    <div style="text-align:center;">
+        <input class="codeTxt" type="number" /><br>
+        <button class="btn" onclick="galleryCode();"><span>בדוק קוד</span><br /></button>
+        <p class="wrongCode">מסר מתורגם מנאו:<br>הקוד אינו נכון..<br> בטוחים שזה הקוד שקיבלתם מנאו? <br> אולי הוא התבלבל.. נסו שוב</p>
+        <p class="rightCode">מסר מתורגם מנאו:<br> אתם מדהימים!<br> מקווה שאתם מוכנים לשאלה הבאה <br /> ...טוען שאלה...</p>
+    </div>
 
-
-
+    <!-- <img id="myImg" class="imgRnd" src="images/heros/img_lights.jpg" onclick=" itaiimgmodal();" alt="Northern Lights, Norway" width="300" height="200">-->
+    <!--ההגדלה של תמונה שנלחצה-->
+    <div id="myModal" class="modal">
+        <span class="close">×</span>
+        <img class="modal-content" id="imgBig">
+        <div id="caption"></div>
+    </div>
     <script>
 
-    </script>
+        //$(function () {
+        //    //Keep track of how many swipes
+        //    var count = 0;
+        //    //Enable swiping...
+        //    $("#test").swipe({
+        //        //Single swipe handler for left swipes
+        //        swipeLeft: function (event, direction, distance, duration, fingerCount) {
+        //            $(this).text("You swiped " + direction + " " + ++count + " times ");
+        //        },
+        //        //Default is 75px, set to 0 for demo so any distance triggers swipe
+        //        threshold: 0
+        //    });
+        //});
 
+
+                //$(function () {
+                //    // Bind the swipeleftHandler callback function to the swipe event on div.box
+                //    $("body").on("swipeleft", swipeleftHandler);
+
+                //    // Callback function references the event target and adds the 'swipeleft' class to it
+                //    function swipeleftHandler(event) {
+                //        alert("שמאלה");
+
+                //       // $(event.target).addClass("swipeleft");
+                //    }
+
+                //});
+
+    </script>
 
 </body>
 </html>
