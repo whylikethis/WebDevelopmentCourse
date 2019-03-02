@@ -10,9 +10,9 @@
 h2 {
     font-size: 20pt;
 }
-
-
-
+.alignCenter {
+    text-align: center;
+}
 
 
 /*#region NavStyle */
@@ -291,4 +291,24 @@ video {
 .galfooter{
     position:absolute;
     height:1px;
+}
+
+
+
+@media screen and (min-width: 450px) {
+    body {
+        /*background-color: lightgreen;*/
+        width: 450px;
+        vertical-align: middle;
+        margin: auto;
+    }
+    .nonMobileMsg {
+        text-align: center;
+    }
+
+}
+@media screen and (max-width: 449px) {
+    .nonMobileMsg {
+        display: none;
+    }
 }

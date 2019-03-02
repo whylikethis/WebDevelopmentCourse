@@ -2,7 +2,7 @@
 <html lang="he-il" dir="rtl">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>שער כניסה</title>
     <meta name="description" content="" />
     <meta name="keywords" content="Nao Escap, social robot, Nao Robot, Escape Room, HIT, Learning Technologies" />
     <meta name="author" content="itai einati, dean markus, stav bar shay" />
@@ -13,10 +13,8 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-
-
     <link href="Styles/myStyle.css" rel="stylesheet" type="text/css" />
+
     <!-- Scripts -->
     <script src="jScripts/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="jScripts/jquery.touchSwipe.min.js" type="text/javascript"></script>
@@ -41,17 +39,17 @@
     </nav>
 
 
-    <div id="main">
 
-        <div class="w3-teal haederStyle" style="display:flex;">
-            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
-            <div class="w3-container">
-                <h1>כניסה למשחק</h1>
-            </div>
+
+    <div class="w3-teal haederStyle" style="display:flex;">
+        <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container">
+            <h1>כניסה למשחק</h1>
         </div>
+    </div>
 
 
-
+    <div id="main">
         <div class="about-container">
             <p class="startMsg marginRightTxt">
                 אזור זה מיועד רק לשחקנים בחדר הבריחה.. <br>
@@ -59,8 +57,8 @@
             </p>
 
             <br>
-            <div style="text-align:center;">
-                <input class="codeTxt" type="text"/><br>
+            <div class="alignCenter">
+                <input class="codeTxt" type="text" /><br>
                 <button class="btn" onclick="enterGame();" style="vertical-align:middle"><span>כניסה</span><br /></button>
                 <p class="wrongCode">מסר מתורגם מנאו:<br>הקוד אינו נכון..<br> אבל בלי לחץ רק עתיד המדינה תלוי בכם. <br> לא ביג דיל.. נסו שוב</p>
                 <p class="rightCode">מסר מתורגם מנאו:<br> בחרתי לי סוכנים מעולים..<br> רק אתם מסוגלים להציל את המדינה <br /> נכנס</p>

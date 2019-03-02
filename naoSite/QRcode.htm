@@ -2,7 +2,7 @@
 <html lang="he-il" dir="rtl">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>סריקת QR</title>
     <meta name="description" content="" />
     <meta name="keywords" content="Nao Escap, social robot, Nao Robot, Escape Room, HIT, Learning Technologies" />
     <meta name="author" content="itai einati, dean markus, stav bar shay" />
@@ -39,34 +39,34 @@
         </div>
     </nav>
 
-    <div id="main">
-        <div class="w3-teal haederStyle" style="display:flex;">
-            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
-            <div class="w3-container">
-                <h1>סריקת קוד QR</h1>
-            </div>
-        </div>
 
+    <div class="w3-teal haederStyle" style="display:flex;">
+        <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container">
+            <h1>סריקת קוד QR</h1>
+        </div>
+    </div>
+
+    <div id="main">
         <div class="about-container">
             <p class="marginRightTxt">
-                15 -  סרוק את הקוד
+               סרוק את הקוד
             </p>
-
-            <img src="images/camSwich.jpg" id="camSwichIcon" onclick="changeCams1();"  />
+            <!-- הערה - עמוד זה עובד באופן מלא אך ישולב במלואו בפיתוח הסופי -->
+            <img src="images/camSwich.jpg" id="camSwichIcon" onclick="changeCams();" />
             <br>
 
         </div>
     </div>
     <video id="QrPreview"></video>
 
-
-
-
-    <script>//הפעלת המצלמה לצורך סריקת קוד
+    <!-- לא עובד בקובץ ג'אווה סקריפט חיצוני  -->
+    <script>
+    //הפעלת המצלמה לצורך סריקת קוד
         let scanner = new Instascan.Scanner({ video: document.getElementById('QrPreview') });
 
         scanner.addListener('scan', function (content) {
-            console.log(content);
+           // console.log(content);
             alert("הקוד נסרק בהצלחה! <br/> מעביר לשלב הבא <br/> טיפ מנאו: רק עבודת צוות תציל את מצב");
             window.open(content); //מעביר לעמוד שנסרק
         });
@@ -86,7 +86,7 @@
     <script>
         //החלפת מצלמות
         var CountCameras = 0;
-        function changeCams1() {
+        function changeCams() {
             Instascan.Camera.getCameras().then(function (cameras) {
                 if (cameras.length > 0) {
                     CountCameras++;
@@ -94,7 +94,7 @@
                         scanner.start(cameras[CountCameras]);
                     }
                     else {
-                        scanner.start(cameras[0]); 
+                        scanner.start(cameras[0]);
                         CountCameras = 0;
                     }
 
