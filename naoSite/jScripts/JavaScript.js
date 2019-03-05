@@ -6,6 +6,7 @@
         swipe: function (event, direction, distance, duration, fingerCount) {
             switch (direction) {
                 case "left":
+                   
                     w3_open();
                     break;
                 case "right":

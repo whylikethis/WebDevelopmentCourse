@@ -1,5 +1,6 @@
 ﻿body {
     font-family: 'Heebo', sans-serif;
+    touch-action: none;
 }
 
 .haederStyle {
@@ -13,15 +14,45 @@ h2 {
 .alignCenter {
     text-align: center;
 }
+.alignleft {
+    display: block;
+    text-align: left;
+    direction: ltr;
+}
+.startMsg {
+    padding: 0px 10px;
+}
+
+#riddle2color {
+    background-color: black !important;
+}
+#riddle3color {
+    background-color: darkgreen !important;
+}
+#riddle4color {
+    background-color: red !important;
+}
+
+.underl {
+    border-bottom: 2px solid #2b81da;
+}
 
 
 /*#region NavStyle */
+.logo {
+    zoom: 0.5;
+}
+
+.navStyle {
+    font-weight: bold;
+}
+
 .ActiveNav {
     color: #334d99;
 }
 
 #openNav {
-    background-color: #334d99 !important;
+    background-color: transparent !important;
 }
 
 .RightText {
@@ -33,6 +64,8 @@ h2 {
     height: 73.5px;
     text-align: center !important;
     margin-bottom: 10px;
+    background-color: white;
+    cursor: pointer;
 }
 /*#endregion NavStyle*/
 

@@ -23,13 +23,13 @@
 </head>
 <body class="qrPage">
     <nav>
-        <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none" id="mySidebar">
-            <button class="w3-bar-item w3-button w3-large NavHeader"
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-right navStyle" id="mySidebar" style="display:none">
+            <button class="w3-bar-item w3-large NavHeader"
                     onclick="w3_close()">
-                Nao Escap
+                <img src="images/logo.jpg" class="logo" />
             </button>
             <a href="index.htm" class="w3-bar-item w3-button RightText">עמוד הבית</a>
-            <a href="whyus.htm" class="w3-bar-item w3-button RightText">למה אנחנו</a>
+            <a href="whyus.htm" class="w3-bar-item w3-button RightText">Escape NAO</a>
             <a href="gate.htm" class="w3-bar-item w3-button RightText">שער כניסה</a>
             <a href="about.htm" class="w3-bar-item w3-button RightText">אודות</a>
             <a href="QRcode.htm" class="w3-bar-item w3-button RightText ActiveNav">סרוק קוד</a>
@@ -50,7 +50,7 @@
     <div id="main">
         <div class="about-container">
             <p class="marginRightTxt">
-               סרוק את הקוד
+                סרוק את הקוד
             </p>
             <!-- הערה - עמוד זה עובד באופן מלא אך ישולב במלואו בפיתוח הסופי -->
             <img src="images/camSwich.jpg" id="camSwichIcon" onclick="changeCams();" />
@@ -62,11 +62,11 @@
 
     <!-- לא עובד בקובץ ג'אווה סקריפט חיצוני  -->
     <script>
-    //הפעלת המצלמה לצורך סריקת קוד
+        //הפעלת המצלמה לצורך סריקת קוד
         let scanner = new Instascan.Scanner({ video: document.getElementById('QrPreview') });
 
         scanner.addListener('scan', function (content) {
-           // console.log(content);
+            // console.log(content);
             alert("הקוד נסרק בהצלחה! <br/> מעביר לשלב הבא <br/> טיפ מנאו: רק עבודת צוות תציל את מצב");
             window.open(content); //מעביר לעמוד שנסרק
         });

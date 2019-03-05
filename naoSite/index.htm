@@ -10,7 +10,7 @@
     <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <!-- CSS -->
     <!--<link href="Styles/reset.css" rel="stylesheet" type="text/css" />-->
-    <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Heebo:300,400&amp;subset=hebrew" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="Styles/myStyle.css" rel="stylesheet" type="text/css" />
@@ -22,13 +22,13 @@
 </head>
 <body>
     <nav>
-        <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none" id="mySidebar">
-            <button class="w3-bar-item w3-button w3-large NavHeader"
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-right navStyle" id="mySidebar" style="display:none">
+            <button class="w3-bar-item w3-large NavHeader"
                     onclick="w3_close()">
-                Nao Escap
+                <img src="images/logo.jpg" class="logo" />
             </button>
             <a href="index.htm" class="w3-bar-item w3-button RightText ActiveNav">עמוד הבית</a>
-            <a href="whyus.htm" class="w3-bar-item w3-button RightText">למה אנחנו</a>
+            <a href="whyus.htm" class="w3-bar-item w3-button RightText">Escape NAO</a>
             <a href="gate.htm" class="w3-bar-item w3-button RightText">שער כניסה</a>
             <a href="about.htm" class="w3-bar-item w3-button RightText">אודות</a>
             <a href="QRcode.htm" class="w3-bar-item w3-button RightText">סרוק קוד</a>
@@ -71,7 +71,7 @@
 
             <br />
             <div class="alignCenter">
-                <button class="btn" onclick="location.href='whyus.htm'"><span>למה אנחנו</span><br /></button>
+                <button class="btn" onclick="location.href = 'whyus.htm';"><span>סקרנים? לחצו כאן</span><br /></button>
             </div>
 
 
