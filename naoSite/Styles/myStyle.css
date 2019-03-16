@@ -28,6 +28,10 @@ h2 {
 #riddle2color {
     background-color: black !important;
 }
+#smallheader {
+    font-size:20px;
+}
+
 #riddle3color {
     background-color: darkgreen !important;
 }

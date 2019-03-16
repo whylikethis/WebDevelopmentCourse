@@ -2,7 +2,7 @@
 <html lang="he-il" dir="rtl">
 <head>
     <meta charset="utf-8" />
-    <title>חידה שנייה חלק ב</title>
+    <title>ממבה שחורה חלק ב</title>
     <meta name="description" content="" />
     <meta name="keywords" content="Nao Escap, social robot, Nao Robot, Escape Room, HIT, Learning Technologies" />
     <meta name="author" content="itai einati, dean markus, stav bar shay" />
@@ -27,10 +27,10 @@
     <nav class="naoNav"></nav>
 
 
-    <div class="w3-teal haederStyle" style="display:flex;">
+    <div class="w3-teal haederStyle" id="riddle2color" style="display:flex;">
         <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
         <div class="w3-container">
-            <h1>חידה 2 - חלק ב</h1>
+            <h1>ממבה שחורה, <span id="smallheader">חלק ב'</span></h1>
         </div>
     </div>
 
@@ -40,7 +40,7 @@
 
     </div>
     <div class="EnterCodeArea">
-        <input class="codeTxt" id="txtSongRId" type="text" /><br>
+        <input class="codeTxt" name="txtSongR" id="txtSongRId" type="text" /><br>
         <button class="btn" id="btnSongRId" onclick="SongCode();"><span>בדוק קוד</span><br /></button>
         <p class="wrongCode">הקוד אינו נכון..<br> בטוחים בתשובה שלכם? <br> נסו שוב</p>
         <p class="rightCode">
@@ -51,7 +51,7 @@
         </p>
     </div>
     <div id="Riddle2EndDiv" class="EnterCodeArea">
-        <input class="codeTxt2End" type="number" /><br>
+        <input class="codeTxt2End" name="codeTxt2End" type="number" /><br>
         <button class="btn" id="btn2End" onclick="Riddle2EndCode();"><span>בדוק קוד</span><br /></button>
         <p class="wrongCode2End">הקוד אינו נכון..<br> אבל הגעתם עד לכאן אז אנחנו מאמינים בכם <br> נסו שוב</p>
         <p class="rightCode2End">

@@ -99,14 +99,14 @@ function w3_close() { // סגירת תפריט האתר
 
 
 function enterGame() { //כדי לעבור את עמוד השער יש להזין את הקוד הנכון
-    var codeTxt = $('#codeTxt').val();
+    var codeTxt = $('.codeTxt').val();
 
-    if (codeTxt == 'about') {
+    if (codeTxt == 'naonao') {
         $('.rightCode').hide();
         $('.rightCode').slideDown("slow");
 
         setTimeout(function () {
-            location.href = 'about.htm';
+            location.href = 'riddle2_545.htm';
         }, 2000); 
     }
     else {
