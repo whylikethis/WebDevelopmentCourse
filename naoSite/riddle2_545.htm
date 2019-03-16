@@ -22,22 +22,8 @@
 
 </head>
 <body onload="loadPics();">
-    <nav>
-        <div class="w3-sidebar w3-bar-block w3-card w3-animate-right navStyle" id="mySidebar" style="display:none">
-            <button class="w3-bar-item w3-large NavHeader"
-                    onclick="w3_close()">
-                <img src="images/logo.jpg" class="logo" />
-            </button>
-            <a href="index.htm" class="w3-bar-item w3-button RightText">עמוד הבית</a>
-            <a href="whyus.htm" class="w3-bar-item w3-button RightText">Escape NAO</a>
-            <a href="gate.htm" class="w3-bar-item w3-button RightText">שער כניסה</a>
-            <a href="about.htm" class="w3-bar-item w3-button RightText">אודות</a>
-            <a href="QRcode.htm" class="w3-bar-item w3-button RightText">סרוק קוד</a>
-            <a href="riddle2_545.htm" class="w3-bar-item w3-button RightText ActiveNav">חידה 2</a>
-            <a href="riddle3_497.htm" class="w3-bar-item w3-button RightText">חידה 3</a>
-            <a href="riddle4_834.htm" class="w3-bar-item w3-button RightText">חידה 4</a>
-        </div>
-    </nav>
+    <div class="activePageNav">חידה 2</div>
+    <nav class="naoNav"></nav>
 
 
     <div class="w3-teal haederStyle" id="riddle2color" style="display:flex;">
@@ -50,7 +36,7 @@
     <div id="main">
         <p class="startMsg">
             שמחים שהצטרפתם אלינו, כדי להתחיל תשאלו את נאו
-           <br/> <span class="alignleft">'Hey Nao. what am I looking for ?'</span> 
+            <br /> <span class="alignleft">'Hey Nao. what am I looking for ?'</span>
         </p>
         <p class="startMsg">הראו לנאו את התמונה הנכונה, במידה ויתקבל קוד הזינו אותו בתיבת הטקסט המופיעה בתחתית העמוד</p>
     </div>
@@ -66,7 +52,6 @@
         <p class="rightCode">מסר מתורגם מנאו:<br> אתם מדהימים!<br> מקווה שאתם מוכנים לשאלה הבאה <br /> ...טוען שאלה...</p>
     </div>
 
-    <!-- <img id="myImg" class="imgRnd" src="images/heros/img_lights.jpg" onclick=" itaiimgmodal();" alt="Northern Lights, Norway" width="300" height="200">-->
     <!--ההגדלה של תמונה שנלחצה-->
     <div id="myModal" class="modal">
         <span class="close">×</span>

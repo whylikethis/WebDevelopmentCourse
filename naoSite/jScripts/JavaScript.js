@@ -1,7 +1,10 @@
 ﻿$(document).ready(function () {
+    $(".naoNav").load("nav.html"); //טוען את התפריט
+    
     $('#main').hide();
     $('#main').slideDown(1000);
 
+    //אפשרות לפתיחה או סגירה של התפריט בסוויפ
     $('body').swipe({
         swipe: function (event, direction, distance, duration, fingerCount) {
             switch (direction) {
@@ -16,41 +19,6 @@
         }
 
     });
-
-
-    //jQuery(window).on("swipeleft", function (event)
-    //{
-    //    w3_open();
-    //    //event.preventDefault();
-        
-    //},
-    //{ passive: false });
-
-    ////    w3_open();
-    ////});
-
-    //jQuery(window).on("swiperight", function (event) {
-    //    w3_close();
-    //});
-
-    //var hammertime = new Hammer(myElement, myOptions);
-    //hammertime.on('swipe', function (ev) {
-    //    console.log(ev);
-    //});
-
-    //hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-
-
-    //$("body").on("swipeleft", swipeleftHandler);
-    //$("body").on("swiperight", swiperightHandler);
-    //// Callback function references the event target and adds the 'swipeleft' class to it
-    //function swipeleftHandler() {
-    //    w3_open();
-    //}
-    
-    //function swiperightHandler() {
-    //    w3_close();
-    //}
 
 });
 
@@ -78,15 +46,15 @@ function rndPicsFunc() { //פונקציה שמבצעת את ערבוב התמו�
 
     for (i in rndPics) {
         document.getElementById("imgdiv").innerHTML +=
-            "<img class='imgRnd' id='" + rndPics[i] + "' onclick='itaiimgmodal(event);' src='images/heros/" + rndPics[i] + "' />";
+            "<img class='imgRnd' id='" + rndPics[i] + "' onclick='imgModal(event);' src='images/heros/" + rndPics[i] + "' />";
     }
     $('.imgRnd').hide();
     $('.imgRnd').show(2000);
 }
 
-function itaiimgmodal(event) { //מגדיל את התמונה
+function imgModal(event) { //מגדיל את התמונה
     var modal = document.getElementById('myModal');
-    var idname = event.target.id
+    //var idname = event.target.id;
    // var img = document.getElementById(idname.toString());
     var modalImg = document.getElementById("imgBig");
     var captionText = document.getElementById("caption");
@@ -112,6 +80,16 @@ function w3_open() { //פתיחת תפריט האתר
     document.getElementById("mySidebar").style.width = "30%";
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("openNav").style.display = 'none';
+
+
+    //לולאה שעוברת על כל התגיות א ואם התוכן שווה לדיב בעמוד אז תוסיף קלאס שצובע בכחול
+    var activeNav = $('.activePageNav').text();
+    $("a").each(function (i) { 
+        if ($(this).text() == activeNav) {
+            $(this).addClass("ActiveNav");
+        }
+
+});
 }
 function w3_close() { // סגירת תפריט האתר
     document.getElementById("main").style.marginRight = "0%";

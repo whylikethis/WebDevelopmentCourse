@@ -1,6 +1,6 @@
 ﻿body {
     font-family: 'Heebo', sans-serif;
-     /*touch-action: none; */
+    touch-action: pan-y; /*מבטל שגיאה בעת ביצוע סוויפ*/
 }
 
 .haederStyle {
@@ -11,9 +11,11 @@
 h2 {
     font-size: 20pt;
 }
+
 .alignCenter {
     text-align: center;
 }
+
 .alignleft {
     display: block;
     text-align: left;
@@ -33,12 +35,16 @@ h2 {
     background-color: red !important;
 }
 
-.underl {
+.underl { /*קו תחתון רק למילה הראשונה - עמוד whyus*/
     border-bottom: 2px solid #2b81da;
 }
 
 
 /*#region NavStyle */
+.activePageNav{
+    display:none;
+}
+
 .logo {
     zoom: 0.5;
 }
@@ -321,14 +327,9 @@ video {
     display:none;
 }
 
-.galfooter{
-    position:absolute;
-    height:1px;
-}
 
-
-
-@media screen and (min-width: 450px) {
+/*מסכים מעל ל450 פיקסל*/
+@media screen and (min-width: 450px) { 
     body {
         /*background-color: lightgreen;*/
         width: 450px;
@@ -338,8 +339,12 @@ video {
     .nonMobileMsg {
         text-align: center;
     }
-
+    #mySidebar{
+        max-width:150px;
+    }
 }
+
+/*מסכים מתחת ל450 פיקסל*/
 @media screen and (max-width: 449px) {
     .nonMobileMsg {
         display: none;
