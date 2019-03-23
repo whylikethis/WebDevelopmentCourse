@@ -2,16 +2,16 @@
 if(isset($_POST['UserEmail'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "itai.einati@gmail.com";
+    $email_to = "waylikethis@gmail.com";
     $email_subject = "macabi new msg";
 
  
     $UserEmail = $_POST['UserEmail']; // required
-	$UserEmail2 = $_POST['$MsgBody']; // required
-	$UserEmail3 = $_POST['$FullName']; // required
-    $FullName = $_POST['$phone']; // required
+	$MsgBody = $_POST['MsgBody']; // required
+	$FullName = $_POST['FullName']; // required
+    $phone = $_POST['phone']; // required
  
-    $email_message = "שלום אדמין.<br><br>";
+    $email_message = "שלום אדמין<br><br>";
  
      
     function clean_string($string) {
@@ -38,7 +38,7 @@ $headers = 'From: '.$UserEmail."\r\n".
 ?>
  
 <!-- include your own success html here -->
- <!-- Thank you for contacting us. We will be in touch with you very soon. -->
+ <html><body> Thank you for contacting us. We will be in touch with you very soon. </body></html>
 
  
 <?php
