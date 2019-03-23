@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <title>מכבי שירותי בריאות</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="כלים להדרכה סינכרונית נכונה" />
+    <meta name="keywords" content="הנחיה סינכרונית מכבי שירותי בריאות, הנחיה מקוונת">
+    <meta name="author" content="אורלי קוז'וקרו ומירב טלר">
+
+
+    <!--טעינת קובץ CSS של בוטסטראפ-->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!--טעינת קובץ עיצוב CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!--טעינת עיצוב תפריט ניווט צדדי-->
+    <link rel="stylesheet" href="sidebar.css">
+    <!--טעינת קובץ הג'ייסון'-->
+    <script src="data.js"></script>
+    <!--הצבת פביקון-->
+    <link rel="icon" type="image/png" sizes="32x32" href="/macabi/favicon-32x32.png">
+
+    <!--הצבת ספריית הפונטים מגוגל פונטס-->
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&amp;subset=hebrew" rel="stylesheet">
+
+    <!--הצבת ספריות הבוטסטראפ שבאמצעותן עיצבנו את הפרויקט-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!--הגדרת תפריט ניווט עליון-->
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <button class="btn-menu" id="sidebarBtnOpen"></button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample02">
+            <img src="./logo.png" id="logo" alt="לוגו מכבי">
+
+            <div class="menu-link">
+                <a href="#contact">צור קשר</a>
+            </div>
+
+            <div class="menu-link">
+                <a href="#about">אודות</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--הגדרת תפריט ניווט צידי-->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar__btn-close" id="sidebarBtnClose">
+            <img src="./burger_icon.png" id="burgerIcon" alt="">
+            <!-- הגדרת כל הכפתורים בתפריט ניווט הצידי -->
+        </div>
+        <ul>
+            <li><a class="sidebar-link" href="#security">ביטחון</a></li>
+            <li><a class="sidebar-link" href="#voice">קול</a></li>
+            <li><a class="sidebar-link" href="#apperance">לבוש והופעה</a></li>
+            <li><a class="sidebar-link" href="#crowd">רתימת הקהל</a></li>
+            <li><a class="sidebar-link" href="#platform">הכרת הפלטפורמה</a></li>
+            <li><a class="sidebar-link" href="#camera">דיבור מול מצלמה</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-overlay"></div>
+
+    <!--  הגדרת האינפוגרפיקה הראשית -->
+    <div class="container">
+        <!-- קריאה לפונקציה שמחזירה את המשתמש לחלק העליון של העמוד -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">ראשי</button>
+
+        <div class="container-fluid home-container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="home-title">
+                        כלים להדרכה סינכרונית נכונה
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="background-image">
+                    <img class="center_img" src="center_img.png" alt="">
+                </div>
+                <div class="col-sm-4 button-box">
+                    <a href="#crowd">
+                        <button>
+                            <span class="dot"></span>
+                            רתימת הקהל
+                        </button>
+                    </a>
+                </div>
+                <div class="col-sm-4 button-box"></div>
+                <div class="col-sm-4 button-box">
+
+                    <a href="#apperance">
+                        <button class="btn">
+                            לבוש והופעה<span class="dot"></span>
+                        </button>
+                    </a>
+                </div>
+                <div class="col-sm-4 button-box">
+                    <a href="#platform">
+                        <button>
+                            הכרת הפלטפורמה<span class="dot"></span>
+                        </button>
+                    </a>
+                </div>
+                <div class="col-sm-4 button-box"></div>
+                <div class="col-sm-4 button-box">
+                    <a href="#camera">
+                        <button>
+                            <span class="dot"></span>דיבור מול מצלמה
+                        </button>
+                    </a>
+                </div>
+                <div class="col-sm-4 button-box">
+                    <a href="#security">
+                        <button>
+                            ביטחון<span class="dot"></span>
+                        </button>
+                    </a>
+                </div>
+                <div class="col-sm-4 button-box"></div>
+                <div class="col-sm-4 button-box">
+                    <a href="#voice">
+                        <button class="btn">
+                            קול<span class="dot"></span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid home-container">
+            <div id="security" class="row page">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>ביטחון בעת העברת הדרכה סינכרונית</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="iframe">
+                        <!-- הטמעה של התוכן שנשלף מהג'ייסון בעמוד -->
+                        <iframe frameborder="0" height="100%" width="100%" class="content"></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <!-- תכנים שמופיעים בעמוד -->
+                    <p>
+                        הלומדים רואים אתכם מבעד למצלמה. חשוב להישיר מבט אל המצלמה ולחשוב כאילו הלומדים נמצאים מולכם. כאשר קשר העין לא מופנה למצלמה, הלומד עלול לאבד קשב בשיעור והשיעור עלול להיות פחות אפקטיבי.
+                        קשר עין הוא המפתח לקשר טוב עם הלומד.
+                    </p>
+                </div>
+            </div>
+            <div id="voice" class="row page">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>קול המדריך בעת העברת הדרכה סינכורנית</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="iframe">
+                        <iframe frameborder="0" height="100%" width="100%" class="content"></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <p>
+                        הקול שלכם, הוא האמצעי להעברת התוכן באופן חוויתי, מלמד ומעורר קשב.
+                        חשוב מאוד לשמור על עוצמת קול ברורה, שימוש בקול באופן לא מונוטוני, הקול מעורר את הקשב של הלומדים, מאפשר להם לזכור את החומר טוב יותר.
+                        מכיוון שהם אינם רואים אתכם פנים אל פנים, הקול שלכם הוא האמצעי לחיבור טוב ומעניין עם הלומדים.
+                    </p>
+                </div>
+            </div>
+            <div id="apperance" class="row page">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>לבוש המדריך בעת העברת הדרכה סינכרונית</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="iframe">
+                        <iframe frameborder="0" height="100%" width="100%" class="content"></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <p>
+                        ההדרכה מצולמת על רקע ירוק או כחול.
+                        חשוב מאוד לא ללבוש בגדים בגוונים דומים לאלו.
+                        יש ללבוש חולצה חלקה, בצבע בולט. רצוי ללבוש חולצה ומכנס בגוונים בעלי קונטרסט.
+                        לשים לב לא לשים תכשיטים מרשרשים.
+                        יש להקפיד על כללי הלבוש, על מנת להבטיח שתשומת הלב של הלומד תהיה ממוקדת.
+                    </p>
+                </div>
+            </div>
+            <div id="crowd" class="row page">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>רתימת הקהל בעת העברת הדרכה סינכרונית</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="iframe">
+                        <iframe frameborder="0" height="100%" width="100%" class="content"></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <p>
+                        יש חשיבות רבה בהגברת מעורבות הלומדים במהלך הדרכה סינכרונית.
+                        לומד אקטיבי הוא לומד שזוכר.
+                        יש דרכים רבות להגביר את מעורבות הלומד במהלך השיעור הסינכרוני:
+                        <ul id="dotsList">
+                            <li>
+                                יצירת שאלות סקר
+                            </li>
+                            <li>
+                                יצירת שיח בצ'ט
+                            </li>
+                            <li>   שילוב כלי למידה טכנולוגים שונים כמו KAHOOT, PLAYBUZZ</li>
+                        </ul>
+
+
+                    </p>
+                </div>
+            </div>
+            <div id="platform" class="row page">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>הכרת פלטפורמת ההדרכה סינכרונית</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="iframe">
+                        <iframe frameborder="0" height="100%" width="100%" class="content"></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <p>
+                        ההדרכה הסינכרונית מועברת באמצעות ממשק טכנולוגי בשם Cisco Webex, זוהי פלטפורמה אינטואיטיבית להעברת שיעור סינכרוני.
+                        פלטפורמה זו מאפשרת ללומדים לצפות בתוכן השיעור ובמצלמת המנחה.
+                        ניתן לשלב בשיעור מצגות, שיתוף מסך, קטעי וידאו, אודיו ואף יצירת שאלונים להגברת מעורבות הלומדים, הודעות צ'ט והצבעה.
+                    </p>
+                </div>
+            </div>
+            <div id="camera" class="row page">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h1>דיבור למצלמה בעת העברת הדרכה סינכרונית</h1>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="iframe">
+                        <iframe frameborder="0" height="100%" width="100%" class="content"></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <p>
+                        דיבור מול מצלמה זהו סגנון דיבור שונה מדיבור מול קהל.
+                        יש תמיד לזכור שמבעד למצלמה צופים בכם מאות לומדים המצפים שתעניינו ותעשירו את ידיעותיהם.
+                        מומלץ לתרגל ולהתכונן לשיעור מול מראה, להקפיד על קשר עין, קול דיבור גבוה ותנועות גוף טבעיות.
+                    </p>
+                </div>
+            </div>
+            <div id="about" class="row page">
+                <div class="col-sm-12" id="odot">
+                    <h2>אודות</h2>
+                    <p id="pOdot">
+                        אפיון ופיתוח: אורלי קוז'וקרו ומירב טלר
+                        <br />
+                        פותח במסגרת פרויקט בקורס: תכנות 3, תשע"ט
+                        <br />
+                        <a id="logoA" href="http://www.hit.ac.il/telem/overview" target="_blank">הפקולטה לטכנולוגיות למידה  </a>
+                        <br />
+                        <div id="HIT"></div>
+                        <br />
+                    <p id="ccP">   הזכויות לתוכן שמורות לאוניברסיטה הפתוחה ולמכבי שירותי בריאות</p>
+
+                </div>
+            </div>
+            <div id="contact" class="row page">
+                <div class="col-sm-12">
+                    <!--טופס צור קשר -->
+                    <h2 id="form">
+                        צרו
+                        איתנו קשר
+                    </h2>
+                </div>
+                <div class="col-sm-12">
+                    <h2>שאלה לצוות ההדרכה של מכבי שירותי בריאות?</h2>
+                </div>
+
+                <!--form-->
+                <form name="contactform" method="post" action="send_form_email.php">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <textarea class="form-control message" rows="4" id="MsgBody" name="MsgBody" placeholder="הודעה"></textarea>
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input class="form-control" id="FullName" name="FullName" placeholder="שם מלא">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input class="form-control" id="UserEmail" placeholder="דואר אלקטרוני">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6" style="margin-top: 15px;">
+                            <button type="submit" id="btnSubmit" class="btn btn-primary" name="insert" value="insert"
+                                    style="width: 100%;height: 48px;background-color: #EDEDED;color: #000;">
+                                שלח
+                            </button>
+							
+                        <div class="form-group col-md-6" style="margin-top: 15px;">
+                            <input type="text" class="form-control" id="phone" placeholder="טלפון נייד">
+                        </div>
+                        </div>
+
+                    </div>
+
+                </form>
+                <p>נחזור אליכם תוך שני ימי עסקים</p>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
