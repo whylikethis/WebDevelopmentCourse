@@ -7,13 +7,11 @@ if(isset($_POST['UserEmail'])) {
 
  
     $UserEmail = $_POST['UserEmail']; // required
-	$UserEmail2 = $_POST['UserEmail2']; // required
-	$UserEmail3 = $_POST['UserEmail3']; // required
-    $FullName = $_POST['FullName']; // required
-    $RunningVersion = $_POST['RunningVersion']; // required
-	$IEVersion = $_POST['IEVersion']; // required
+	$UserEmail2 = $_POST['$MsgBody']; // required
+	$UserEmail3 = $_POST['$FullName']; // required
+    $FullName = $_POST['$phone']; // required
  
-    $email_message = "User just download Emoji For Outlook.<br><br>";
+    $email_message = "שלום אדמין.<br><br>";
  
      
     function clean_string($string) {
