@@ -43,10 +43,34 @@ h2 {
     border-bottom: 2px solid #2b81da;
 }
 
+#btnIndex {
+    background-color: #334d99;
+    border: 2px solid #396c94;
+    color: #ffffff;
+}
+
+ol#whyUsList > li {
+    padding: 5px;
+}
+
+ol#whyUsList > li > span {
+     font-weight: bold;
+}
+.bottomSpace {
+    padding-bottom: 5px;
+}
+
+#border {
+    background: linear-gradient(to right, #4aceedb3, #2129b9);
+    height: 3px;
+    width: 50%;
+}
+
 
 /*#region NavStyle */
-.activePageNav{
-    display:none;
+.activePageNav {
+    display: none;
+    background-color: #ececec !important;
 }
 
 .logo {
@@ -113,8 +137,30 @@ span.aboutImgs span {
 }
 
 
-/*#endregion aboutPage*/
+#hitLogo {
+    border-radius: 0%;
+    zoom: 1;
+}
 
+#groupHitLogo {
+    display: inline-grid;
+    text-align: right;
+}
+
+#telemCss {
+    color: #018087;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#hit {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+/*#endregion aboutPage*/
 /* תיבת טקסט, משוב וכפתור*/
 /*#region Submit Code */
 .EnterCodeArea {
@@ -126,8 +172,29 @@ span.aboutImgs span {
     text-align: center;
 }
 
-.wrongCode, .rightCode, .wrongCode2End, .rightCode2End, #btnGoToR3 {
+.rightCode, .wrongCode2End, .rightCode2End, #btnGoToR3 {
     display: none;
+}
+
+.wrongCode {
+    display: none;
+    /*background-color: rgba(255, 17, 0, 0.2);*/
+    color: red;
+    max-width: fit-content;
+    padding: 15px;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 4px 6px 8px 1px rgba(94,94,94,1);
+}
+.rightCode {
+    display: none;
+    /*background-color: rgba(76, 175, 80, 0.2);*/
+    color: green;
+    max-width: fit-content;
+    padding: 15px;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 4px 6px 8px 1px rgba(94,94,94,1);
 }
 
 .emoji {
