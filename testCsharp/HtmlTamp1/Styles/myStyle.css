@@ -1,0 +1,49 @@
+﻿body {
+        margin: 0 auto;
+
+}
+#container{
+    border: solid;
+    background-color: lightgray;
+    margin: auto;
+    width: fit-content;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 15px;
+}
+h1{   
+    font-weight: bold;
+    font-size: x-large;
+    text-align: -webkit-center;
+
+}
+
+li {
+    padding: 5px;
+}
+.centerAlement{
+    width: 500px;
+    text-align: -webkit-center;
+}
+#sameLine{
+        display: flex;
+        padding-bottom: 15px;
+}
+#sameLine > p{
+    padding-left: 9px;
+
+}
+#centerBtn{
+    width: 500px;
+    text-align: -webkit-center;
+}
+input[type="button"] {
+    color: white;
+    background-color: dimgrey;
+    width: 200px;
+    height: 30px;
+    font-size: 11pt;
+}
+hr {
+    background-color: black;
+}
