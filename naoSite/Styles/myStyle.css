@@ -70,7 +70,6 @@ ol#whyUsList > li > span {
 /*#region NavStyle */
 .activePageNav {
     display: none;
-    background-color: #ececec !important;
 }
 
 .logo {
@@ -83,6 +82,7 @@ ol#whyUsList > li > span {
 
 .ActiveNav {
     color: #334d99;
+    background-color: #ececec !important;
 }
 
 #openNav {
