@@ -20,6 +20,11 @@
 
     });
 
+
+
+    whenEnter();
+
+
 });
 
 var rndPics = [];
@@ -102,6 +107,7 @@ function enterGame() { //כדי לעבור את עמוד השער יש להזי�
     var codeTxt = $('.codeTxt').val();
 
     if (codeTxt == 'naonao') {
+        $('.wrongCode').hide();
         $('.rightCode').hide();
         $('.rightCode').slideDown("slow");
 
@@ -185,4 +191,32 @@ function Riddle2EndCode() { //כדי לעבור את השאלה האחרונה �
         $('.wrongCode2End').hide();
         $('.wrongCode2End').slideDown("slow");
     }
+}
+
+//$("#id_of_textbox").keyup(function (event) {
+//    if (event.keyCode === 13) {
+//        $("#id_of_button").click();
+//    }
+//});
+
+
+function whenEnter() {
+    //בעת הקלדה בתיבת הטקסט לחיצה על אנטר או אישור במקלדת מפעילה את הכפתור
+
+    $("#gateCodeTxt").keyup(function (event) {
+        if (event.keyCode === 13) { $("#gateCodeBtn").click(); }
+    });
+
+    $("#Riddle2Txt1").keyup(function (event) {
+        if (event.keyCode === 13) { $("#Riddle2Btn1").click(); }
+    });
+
+
+    $("#txtSongRId").keyup(function (event) {
+        if (event.keyCode === 13) { $("#btnSongRId").click(); }
+    });
+
+    $("#codeTxt2EndId").keyup(function (event) {
+        if (event.keyCode === 13) { $("#btn2End").click(); }
+    });
 }
