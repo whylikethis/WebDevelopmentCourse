@@ -36,7 +36,7 @@ h2 {
     background-color: darkgreen !important;
 }
 #riddle4color {
-    background-color: red !important;
+    background-color: #ba0001 !important;
 }
 
 .underl { /*קו תחתון רק למילה הראשונה - עמוד whyus*/
@@ -70,6 +70,7 @@ ol#whyUsList > li > span {
 /*#region NavStyle */
 .activePageNav {
     display: none;
+    
 }
 
 .logo {
@@ -214,7 +215,7 @@ span.aboutImgs span {
     color: #334d99;
     text-align: center;
     font-size: 20px;
-    padding: 1px 46px;
+    padding: 1px 35px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
@@ -237,7 +238,7 @@ span.aboutImgs span {
     position: absolute;
     opacity: 0;
     top: 0;
-    left: -105px;
+    left: -60px;
     transition: 0.5s;
 }
 

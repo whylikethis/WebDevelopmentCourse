@@ -76,8 +76,8 @@ function imgModal(event) { //מגדיל את התמונה
 
 
 function w3_open() { //פתיחת תפריט האתר
-    document.getElementById("main").style.marginRight = "30%";
-    document.getElementById("mySidebar").style.width = "30%";
+    document.getElementById("main").style.marginRight = "33%";
+    document.getElementById("mySidebar").style.width = "33%";
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("openNav").style.display = 'none';
 
