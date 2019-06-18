@@ -16,19 +16,19 @@
                     w3_close();
                     break;
             }
-        }
-
+        },
+        // Here your list of excluded elements ...
+        excludedElements: "label, button, input, select, textarea"
     });
 
-
-
-    whenEnter();
-
+    whenEnter(); //לחיצה על אנטר בתיבת טקסט
 
 });
 
 var rndPics = [];
-function loadPics() { //עבור חידת התמונות 
+var fname;
+
+function loadPics(fname) { //עבור חידת התמונות 
     //טוען את התמונות מקובץ ג'ייסון
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -37,44 +37,144 @@ function loadPics() { //עבור חידת התמונות
             for (i in JsonPicsObj) {
                 rndPics.push(JsonPicsObj[i]);
             }
-            rndPicsFunc(); //קורא לפונקציה שמבצעת את הערבוב
+            
+            rndPicsFunc(fname); //קורא לפונקציה שמבצעת את הערבוב
         }
     };
-    xmlhttp.open("GET", "imgJson.json", true);
+    xmlhttp.open("GET", "img_" + fname +".json", true); //מביא את קובץ הגיסון בהתאם לעמוד
     xmlhttp.send();
 
 }
 
-function rndPicsFunc() { //פונקציה שמבצעת את ערבוב התמונות
+function rndPicsFunc(fname) { //פונקציה שמבצעת את ערבוב התמונות
     document.getElementById("imgdiv").innerHTML = "";
-    rndPics.sort(function (a, b) { return 0.5 - Math.random() });
+
+    if (fname == 'heros') { //ערבוב תמונות רק בחידה בלאק ממבה
+        rndPics.sort(function (a, b) { return 0.5 - Math.random() });
+    }
 
     for (i in rndPics) {
         document.getElementById("imgdiv").innerHTML +=
-            "<img class='imgRnd' id='" + rndPics[i] + "' onclick='imgModal(event);' src='images/heros/" + rndPics[i] + "' />";
+            "<img class='imgRnd' id='" + rndPics[i] + "' onclick='imgModal(event,&#39;" + fname + "&#39;);' src='images/" + fname +"/" + rndPics[i] + "' />";
     }
     $('.imgRnd').hide();
     $('.imgRnd').show(2000);
 }
 
-function imgModal(event) { //מגדיל את התמונה
+
+var imgurl;
+function imgModal(event, fname) { //מגדיל את התמונה
     var modal = document.getElementById('myModal');
-    //var idname = event.target.id;
-   // var img = document.getElementById(idname.toString());
     var modalImg = document.getElementById("imgBig");
     var captionText = document.getElementById("caption");
 
         modal.style.display = "block";
         modalImg.src = event.target.src;
+
+    if (fname == 'heros') {//אם אנחנו בחידת בלאק ממבה
         captionText.innerHTML = "הראו לנאו את התמונה לקבלת משוב" //this.alt;
-    
+    }
+    else {//אם אנחנו בחידת דרקון כחול
+        var ImgCaptionText = "בחר את מיקום התמונה במשפט או סגור לביטול <br/> "
+
+        var wordsInNiv = $('#WordsInNiv').text();
+        for (var i = 1; i <= wordsInNiv; i++) {
+            ImgCaptionText += "<input class='BtnNiv' onclick='NivImgClick(" + i.toString() + ");' id='btnNiv" + i.toString() + "' type='button' value='" + i.toString() + "' />   "
+        }
+        captionText.innerHTML = ImgCaptionText; 
+        imgurl = modalImg.src;
+    }
 
     //בלחיצה על כפתור הסגירה של ההגדלת תמונה
     var span = document.getElementsByClassName("close")[0];
     span.onclick = function () {
         modal.style.display = "none";
-        rndPicsFunc(); //קורא לפונקציה שמבצעת את הערבוב
+
+        if (fname == 'heros') {
+            rndPicsFunc('heros'); //קורא לפונקציה שמבצעת את הערבוב
+        }
+        
     }
+}
+
+
+
+function NivImgClick(n) { 
+    //לחיצה על כפתור כלשהו בתוך התמונה גדולה בחידת הדרקון
+    //שולחת תמונה קטנה למיקום בתוך המסגרת המתאימה
+    var modal = document.getElementById('myModal');
+    modal.style.display = "none";
+
+
+    var nivNum = $('#NivNum').text();
+    var nivDiv = "#Niv" + nivNum.toString() + "_w" + n.toString();
+    var imgTag = "<img id='Niv" + nivNum.toString() + "_Img" + + n.toString() +"' class='smallPicNivImg' src='" + imgurl +"' />";
+    $(nivDiv).html(imgTag);
+}
+
+var peMefik;
+var borAm;
+function checkNiv(n) { //בדיקת המשפט בתוך חידת הדרקון
+    var nivNames = new Array();
+    var wordsInNiv = $('#WordsInNiv').text();
+
+    for (var i = 1; i <= wordsInNiv; i++) {
+        var id = "#Niv" + n.toString() + "_Img" + i.toString();
+        var imgsrc = $(id).attr('src');
+
+        try {//רק אם המשתמש לוחץ על כפתור בדוק בלי למלא את כל התמונות אז תציג משוב שלילי
+            var index = imgsrc.lastIndexOf("/") + 1;
+        }
+        catch (err) {
+            $("#Niv" + n + "Feedback").html("<img src='images/X.png' class='smallPicNivImg'/>");
+        }
+
+        var imgname = imgsrc.substr(index);
+        nivNames.push(imgname);
+    }
+
+    var nivNum = $('#NivNum').text();
+    if (peMefik!= 1 && nivNames[0] == "pe.jpg" && nivNames[1] == "producer.jpg" && nivNames[2] == "margliut.jpg") {
+        peMefik = 1;
+        good();
+        nivNum++;
+        $('#NivNum').text(nivNum);
+        
+    }
+
+    else if (borAm != 1 && nivNames[0] == "bor.jpg" && nivNames[1] == "am.jpg" && nivNames[2] == "Israel.png") {
+        borAm = 1;
+        good();
+        nivNum++;
+        $('#NivNum').text(nivNum);
+        
+    }
+    else if (nivNames[0] == "enter.jpg" && nivNames[1] == "wine.jpg" && nivNames[2] == "out.png" && nivNames[3] == "secret.png") {
+        good();
+    }
+    else {
+
+        $("#Niv" + n + "Feedback").html("<img src='images/X.png' class='smallPicNivImg'/>");
+    }
+
+    function good() {
+        alert("כל הכבוד וזה");
+        $("#btnNiv" + n).hide();
+        $("#Niv" + n + "_Img1").css("opacity", "0.4");
+        $("#Niv" + n + "_Img2").css("opacity", "0.4");
+        $("#Niv" + n + "_Img3").css("opacity", "0.4");
+        $("#Niv" + n + "Feedback").hide();
+        $("#Niv" + n + "Feedback").html("<img src='images/V.png' class='smallPicNivImg'/>");
+        $("#Niv" + n + "Feedback").show("slow");
+
+        $("#Niv" + (n + 1)).css("display", "inline-flex");
+        $("#Niv" + (n + 1) + "wrap").show("slow");
+    };
+
+    if ($('#NivNum').text() == "3") {
+        $('#WordsInNiv').text("4");
+    }
+
 }
 
 
@@ -219,4 +319,59 @@ function whenEnter() {
     $("#codeTxt2EndId").keyup(function (event) {
         if (event.keyCode === 13) { $("#btn2End").click(); }
     });
+
+    $("#Riddle3Txt").keyup(function (event) {
+        if (event.keyCode === 13) { $("#Riddle3Btn").click(); }
+    });
+
 }
+
+
+function Riddle3Btn() {
+    $(".wrongCode").hide();
+    $(".rightCode").hide();
+
+    var abc = "אבגדהוזחטיכלמנסעפצקרשתךםןףץ";
+    var abc2 = "abcdefghijklmnopqrstuvwxyz";
+    var heGematria = "1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100,200,300,400,500,600,700,800,900";
+    var arrGematria = heGematria.split(',');
+
+    var endWord = " ";
+
+    for (var j = 0; j < $('#Riddle3Txt').val().length; j++) {
+        var txtChar = $('#Riddle3Txt').val().substr(j, 1);
+        for (var i = 0; i < abc.length; i++) {
+            if (txtChar == abc[i]) {
+                endWord += arrGematria[i]
+            }
+            if (txtChar == abc2[i]) {
+                endWord += arrGematria[i]
+            }
+        }
+       
+    };
+
+    
+    $('#Riddle3Txt').focus();
+
+    odoo.default({ el: '.js-odoo', from: " " + $('#Riddle3Txt').val(), to: endWord, animationDelay: 1000 });
+
+
+    setTimeout(function () {
+
+        if ($('#Riddle3Txt').val() == "דיו") {
+
+            $(".wrongCode").hide();
+            $(".rightCode").show(1000);
+        }
+        else {
+            $(".wrongCode").show(1000);
+            $(".rightCode").hide();
+        }
+
+    }, 4000);
+
+
+
+}
+

@@ -1,0 +1,204 @@
+﻿<!doctype html>
+<html lang="he-il" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>דרקון ירוק - חידה שלישית</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="Nao Escap, social robot, Nao Robot, Escape Room, HIT, Learning Technologies" />
+    <meta name="author" content="itai einati, dean markus, stav bar shay" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!-- CSS -->
+    <!--<link href="Styles/reset.css" rel="stylesheet" type="text/css" />-->
+    <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="Styles/myStyle.css" rel="stylesheet" type="text/css" />
+    <!-- Scripts -->
+    <script src="jScripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="jScripts/jquery.touchSwipe.min.js" type="text/javascript"></script>
+    <script src="jScripts/JavaScript.js" type="text/javascript"></script>
+
+
+    <style>
+
+        .slottt-machine-recipe {
+            margin: 0px auto;
+            width: 700px;
+            margin-top: 50px;
+        }
+
+        .slottt-machine-recipe__mask {
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            margin-bottom: -40px;
+        }
+
+        .slottt-machine-recipe__items_container {
+            position: absolute;
+        }
+
+        .slottt-machine-recipe__item {
+            min-height: 150px;
+            max-height: 150px;
+            margin: 0px;
+            padding: 0px;
+            background-size: contain;
+        }
+
+        /* Typography */
+
+        body {
+            font-family: Helvetica, Arial, sans serif;
+        }
+
+        .recipe_if, .recipe_then {
+            font-weight: bold;
+            font-size: 120px;
+        }
+
+        .tagline {
+            font-weight: normal;
+            font-size: 24px;
+        }
+
+        a {
+            font-weight: bold;
+            text-decoration: none;
+            color: #33CCFF;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+    <div class="activePageNav">דרקון ירוק</div>
+    <nav class="naoNav"></nav>
+
+
+    <div class="w3-teal haederStyle" id="riddle3color" style="display:flex;">
+        <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container">
+            <h1>דרקון ירוק</h1>
+        </div>
+    </div>
+    <div id="main">
+        <p class="startMsg">החידה השלישית תפותח בהמשך</p>
+
+        <div class="alignCenter">
+            <input class="codeTxt" id="Riddle3Txt" name="riddle3txt" type="number" /><br>
+            <button class="btn" id="Riddle3Btn" onclick="galleryCode();"><span>בדוק קוד</span><br /></button>
+            <br />
+
+            <div class="slottt-machine-recipe">
+                <div class="slottt-machine-recipe__mask" id="wordbox">
+                    <div class="slottt-machine-recipe__items_container recipe_if">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="wrongCode">מסר מתורגם מנאו:<br>הקוד אינו נכון..<br> בטוחים שזה הקוד שקיבלתם מנאו? <br> אולי הוא התבלבל.. נסו שוב</div>
+            <div class="rightCode">
+                מסר מתורגם מנאו:<br> אתם מדהימים!<br> מקווה שאתם מוכנים לשאלה הבאה
+                <div class="directions">
+                    <br /> ...טוען שאלה...
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <script>
+        // IFTTT Slottt Machine by Jen Hamon
+        // jen@ifttt.com
+        // github.com/jhamon
+        var wordlist = [
+            'office',
+            'official',
+            'teamwork',
+            'monitor',
+            'schedule',
+            'prepare',
+            'track',
+            'record',
+            'remember',
+            'make a note',
+            'archive',
+            'timeshift',
+        ]
+
+        function buildSlotItem(text) {
+            return $('<div>').addClass('slottt-machine-recipe__item')
+                .text(text)
+        }
+
+        function buildSlotContents($container, wordlist) {
+            $items = wordlist.map(buildSlotItem);
+            $container.append($items);
+        }
+
+        function popPushNItems($container, n) {
+            $children = $container.find('.slottt-machine-recipe__item');
+            $children.slice(0, n).insertAfter($children.last());
+
+            if (n === $children.length) {
+                popPushNItems($container, 1);
+            }
+        }
+
+        // After the slide animation is complete, we want to pop some items off
+        // the front of the container and push them onto the end. This is
+        // so the animation can slide upward infinitely without adding
+        // inifinte div elements inside the container.
+        function rotateContents($container, n) {
+            setTimeout(function () {
+                popPushNItems($container, n);
+                $container.css({ top: 0 });
+            }, 300);
+        }
+
+        function randomSlotttIndex(max) {
+            var randIndex = (Math.random() * max | 0);
+            return (randIndex > 10) ? randIndex : randomSlotttIndex(max);
+        }
+
+
+
+        function animate() { //המהירות שבה המילים זזות
+            var wordIndex = randomSlotttIndex(wordlist.length);
+            $wordbox.animate({ top: -wordIndex * 150 }, 5000, 'swing', function () {
+                rotateContents($wordbox, wordIndex);
+            });
+        }
+
+        $(function () { //כל כמה זמן לבצע ערבוב
+            $wordbox = $('#wordbox .slottt-machine-recipe__items_container');
+            buildSlotContents($wordbox, wordlist);
+            buildSlotContents($wordbox, wordlist);
+            buildSlotContents($wordbox, wordlist);
+            buildSlotContents($wordbox, wordlist);
+
+            setInterval(animate, 2000);
+        });
+
+
+    </script>
+
+
+
+
+</body>
+</html>

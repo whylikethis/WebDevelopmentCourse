@@ -22,7 +22,7 @@
 
 
 </head>
-<body>
+<body onload="loadPics('nivs');">
     <div class="activePageNav">לילה אדום</div>
     <nav class="naoNav"></nav>
 
@@ -37,7 +37,60 @@
         <p class="startMsg">החידה הרביעית תפותח בהמשך</p>
 
 
+        <div id="imgWrapper">
+            <!-- קונטיינר לתמונות הקטנות -->
+            <div id="imgdiv"></div>
+        </div>
+        <input id="btnNiv" type="button" value="button" /> <br />
+
+        <div id="Niv3wrap" style="display:none;">
+            <p>משפט שלישי</p>
+            <div id="Niv3" style="display:none;">
+                <div id="Niv3_w1" class="smallPicNiv"></div>
+                <div id="Niv3_w2" class="smallPicNiv"></div>
+                <div id="Niv3_w3" class="smallPicNiv"></div>
+                <div id="Niv3_w4" class="smallPicNiv"></div>
+                <input id="btnNiv3" class="btn" onclick="checkNiv(3)" type="button" value="בדוק" />
+                <div id="Niv3Feedback"></div>
+            </div>
+        </div>
+    </div>  <br />
+
+    <div id="Niv2wrap" style="display:none;">
+        <p>משפט שני</p>
+        <div id="Niv2" style="display:none;">
+            <div id="Niv2_w1" class="smallPicNiv"></div>
+            <div id="Niv2_w2" class="smallPicNiv"></div>
+            <div id="Niv2_w3" class="smallPicNiv"></div>
+            <input id="btnNiv2" class="btn" onclick="checkNiv(2)" type="button" value="בדוק" />
+            <div id="Niv2Feedback"></div>
+        </div>
+    </div> <br />
+
+    <div id="Niv2wrap">
+        <p>משפט ראשון</p>
+        <div id="Niv1" style="display:inline-flex;">
+
+            <div id="Niv1_w1" class="smallPicNiv"></div>
+            <div id="Niv1_w2" class="smallPicNiv"></div>
+            <div id="Niv1_w3" class="smallPicNiv"></div>
+            <input id="btnNiv1" class="btn" onclick="checkNiv(1)" type="button" value="בדוק" />
+            <div id="Niv1Feedback"></div>
+        </div>
+    </div>  <br />
+
+    <!--ההגדלה של תמונה שנלחצה-->
+    <div id="myModal" class="modal">
+        <span class="close">×</span>
+        <img class="modal-content" id="imgBig">
+        <div id="caption"></div>
     </div>
+
+    <div id="NivNum">1</div>
+    <div id="WordsInNiv">3</div>
+
+
+    <!--</div>-->
 
 </body>
 </html>

@@ -33,14 +33,36 @@ h2 {
 }
 
 #riddle3color {
-    background-color: darkgreen !important;
+    background-color: rgb(26, 83, 255) !important;
 }
 #riddle4color {
     background-color: #ba0001 !important;
 }
+.smallPicNiv{
+    height:50px;
+    width:50px;
+    border:1px solid black;
+    margin:5px;
+}
+.smallPicNivImg {
+    height: 50px;
+    width: 50px;
+}
+#NivNum{
+    visibility:hidden;
+}
+#WordsInNiv {
+    visibility: hidden;
+}
 
 .underl { /*קו תחתון רק למילה הראשונה - עמוד whyus*/
     border-bottom: 2px solid #2b81da;
+}
+
+
+.FeedbackMsg {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #btnIndex {
