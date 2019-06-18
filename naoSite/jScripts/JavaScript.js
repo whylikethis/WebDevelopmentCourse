@@ -134,7 +134,7 @@ function checkNiv(n) { //בדיקת המשפט בתוך חידת הדרקון
     }
 
     var nivNum = $('#NivNum').text();
-    if (peMefik!= 1 && nivNames[0] == "pe.jpg" && nivNames[1] == "producer.jpg" && nivNames[2] == "margliut.jpg") {
+    if (peMefik != 1 && nivNames[0] == "pe.jpg" && nivNames[1] == "mefik.jpg" && nivNames[2] == "margliut.jpg") {
         peMefik = 1;
         good();
         nivNum++;
@@ -142,14 +142,14 @@ function checkNiv(n) { //בדיקת המשפט בתוך חידת הדרקון
         
     }
 
-    else if (borAm != 1 && nivNames[0] == "bor.jpg" && nivNames[1] == "am.jpg" && nivNames[2] == "Israel.png") {
+    else if (borAm != 1 && nivNames[0] == "bor.jpg" && nivNames[1] == "am.jpg" && nivNames[2] == "hahartz.jpg") {
         borAm = 1;
         good();
         nivNum++;
         $('#NivNum').text(nivNum);
         
     }
-    else if (nivNames[0] == "enter.jpg" && nivNames[1] == "wine.jpg" && nivNames[2] == "out.png" && nivNames[3] == "secret.png") {
+    else if (nivNames[0] == "enter.jpg" && nivNames[1] == "wine.jpg" && nivNames[2] == "out.jpg" && nivNames[3] == "secret.jpg") {
         good();
     }
     else {
@@ -160,9 +160,11 @@ function checkNiv(n) { //בדיקת המשפט בתוך חידת הדרקון
     function good() {
         alert("כל הכבוד וזה");
         $("#btnNiv" + n).hide();
-        $("#Niv" + n + "_Img1").css("opacity", "0.4");
-        $("#Niv" + n + "_Img2").css("opacity", "0.4");
-        $("#Niv" + n + "_Img3").css("opacity", "0.4");
+        $("#Niv" + n + "_Img1").css("opacity", "0.7");
+        $("#Niv" + n + "_Img2").css("opacity", "0.7");
+        $("#Niv" + n + "_Img3").css("opacity", "0.7");
+        if (n == 3) { $("#Niv" + n + "_Img4").css("opacity", "0.6"); }
+
         $("#Niv" + n + "Feedback").hide();
         $("#Niv" + n + "Feedback").html("<img src='images/V.png' class='smallPicNivImg'/>");
         $("#Niv" + n + "Feedback").show("slow");

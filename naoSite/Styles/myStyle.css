@@ -111,7 +111,9 @@ ol#whyUsList > li > span {
 #openNav {
     background-color: transparent !important;
 }
-
+#openNav:hover {
+        color: #fff !important;
+    }
 .RightText {
     text-align: right !important;
 }
