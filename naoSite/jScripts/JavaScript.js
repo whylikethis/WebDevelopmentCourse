@@ -410,11 +410,13 @@ function Riddle3Btn() {
         if ($('#Riddle3Txt').val() == "דיו") {
 
             $(".wrongCode").hide();
-            $(".rightCode").show(1000);
+            $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
+            $('.rightCode').slideDown("slow");
         }
         else {
-            $(".wrongCode").show(1000);
-            $(".rightCode").hide();
+            $('.wrongCode').hide();
+            $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
+            $('.wrongCode').slideDown("slow");
         }
 
     }, 4000);
