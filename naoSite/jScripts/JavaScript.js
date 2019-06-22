@@ -400,7 +400,7 @@ function Riddle3Btn() {
         }
     };
 
-    $('#Riddle3Txt').focus();
+    //$('#Riddle3Txt').focus();
 
     odoo.default({ el: '.js-odoo', from: " " + $('#Riddle3Txt').val(), to: endWord, animationDelay: 1000 });
 
