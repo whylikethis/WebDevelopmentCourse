@@ -3,6 +3,13 @@
     touch-action: pan-y; /*מבטל שגיאה בעת ביצוע סוויפ*/
 }
 
+.aafNone{
+    display:none !important;
+}
+.aafUnset {
+    display: unset !important;
+}
+
 .haederStyle {
     background-color: #334d99 !important;
     margin-bottom: 10px;

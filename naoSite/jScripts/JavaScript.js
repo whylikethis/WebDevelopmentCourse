@@ -1,19 +1,37 @@
 ﻿$(document).ready(function () {
     $(".naoNav").load("nav.html"); //טוען את התפריט
-    
+
     $('#main').hide();
     $('#main').slideDown(1000);
 
+
     //אפשרות לפתיחה או סגירה של התפריט בסוויפ
-    $('body').swipe({
+        $('.bodyClass').swipe({
+            swipe: function (event, direction, distance, duration, fingerCount) {
+                switch (direction) {
+                    case "left":
+
+                        w3_open();
+                        break;
+                    case "right":
+                        w3_close();
+                        break;
+                }
+            },
+            // Here your list of excluded elements ...
+            excludedElements: "label, button, input, select, textarea"
+        });
+
+
+    //אפשרות דפדוף בגלרייה של חידה 4 
+    $('.modal').swipe({
         swipe: function (event, direction, distance, duration, fingerCount) {
             switch (direction) {
                 case "left":
-                   
-                    w3_open();
+                    picGallery(1);
                     break;
                 case "right":
-                    w3_close();
+                    picGallery(-1);
                     break;
             }
         },
@@ -21,13 +39,13 @@
         excludedElements: "label, button, input, select, textarea"
     });
 
-    whenEnter(); //לחיצה על אנטר בתיבת טקסט
 
+    whenEnter(); //לחיצה על אנטר בתיבת טקסט
 });
+
 
 var rndPics = [];
 var fname;
-
 function loadPics(fname) { //עבור חידת התמונות 
     //טוען את התמונות מקובץ ג'ייסון
     var xmlhttp = new XMLHttpRequest();
@@ -55,7 +73,7 @@ function rndPicsFunc(fname) { //פונקציה שמבצעת את ערבוב הת
 
     for (i in rndPics) {
         document.getElementById("imgdiv").innerHTML +=
-            "<img class='imgRnd' id='" + rndPics[i] + "' onclick='imgModal(event,&#39;" + fname + "&#39;);' src='images/" + fname +"/" + rndPics[i] + "' />";
+            "<img class='imgRnd' id='" + rndPics[i] + "' alt='"+ i.toString() +"' onclick='imgModal(event,&#39;" + fname + "&#39;);' src='images/" + fname +"/" + rndPics[i] + "' />";
     }
     $('.imgRnd').hide();
     $('.imgRnd').show(2000);
@@ -67,9 +85,12 @@ function imgModal(event, fname) { //מגדיל את התמונה
     var modal = document.getElementById('myModal');
     var modalImg = document.getElementById("imgBig");
     var captionText = document.getElementById("caption");
+        document.getElementById("alt").innerText = event.target.alt.toString();
+    //var alt = event.target.alt;
 
         modal.style.display = "block";
         modalImg.src = event.target.src;
+        
 
     if (fname == 'heros') {//אם אנחנו בחידת בלאק ממבה
         captionText.innerHTML = "הראו לנאו את התמונה לקבלת משוב" //this.alt;
@@ -93,10 +114,29 @@ function imgModal(event, fname) { //מגדיל את התמונה
         if (fname == 'heros') {
             rndPicsFunc('heros'); //קורא לפונקציה שמבצעת את הערבוב
         }
-        
     }
 }
 
+//אפקט גלרייה בחידה 4 למעבר נוח
+function picGallery(n) {
+    var CurrentAlt = document.getElementById("alt").innerText;
+    var newNum = n + parseInt(CurrentAlt);
+    showNextPic(newNum);
+}
+
+function showNextPic(n) {
+    var x = document.getElementsByClassName("imgRnd");
+    if (n >= (x.length - 1)) { n = 0 }
+    if (n < 0) { n = x.length -1 }
+    var NextAlt= $('[alt=' + n.toString() + ']').attr('alt').toString();
+    var NextSrc = $('[alt=' + n.toString() + ']').attr('src').toString();
+
+    var modalImg = document.getElementById("imgBig");
+    modalImg.alt = NextAlt;
+    modalImg.src = NextSrc;
+
+    document.getElementById("alt").innerText = NextAlt;
+}
 
 
 function NivImgClick(n) { 
@@ -180,14 +220,25 @@ function checkNiv(n) { //בדיקת המשפט בתוך חידת הדרקון
 }
 
 
-
-
 function w3_open() { //פתיחת תפריט האתר
     document.getElementById("main").style.marginRight = "33%";
     document.getElementById("mySidebar").style.width = "33%";
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("openNav").style.display = 'none';
 
+    //אם ביו אר אל יש את מילת הקוד אז תראה את החידות בתפריט
+    const urlParams = new URLSearchParams(window.location.search);
+    const userParam = urlParams.get('user');
+
+    if (userParam == "AdminNav") {
+        $('#aafId').removeClass("aafNone");
+        $('#aafId').addClass("aafUnset");
+
+        $("a").each(function () {
+            var href = $(this).attr('href');
+            $(this).attr("href", href + "?user=AdminNav");
+        });
+    }
 
     //לולאה שעוברת על כל התגיות א ואם התוכן שווה לדיב בעמוד אז תוסיף קלאס שצובע בכחול
     var activeNav = $('.activePageNav').text();
@@ -195,9 +246,9 @@ function w3_open() { //פתיחת תפריט האתר
         if ($(this).text() == activeNav) {
             $(this).addClass("ActiveNav");
         }
-
 });
 }
+
 function w3_close() { // סגירת תפריט האתר
     document.getElementById("main").style.marginRight = "0%";
     document.getElementById("mySidebar").style.display = "none";
@@ -208,21 +259,23 @@ function w3_close() { // סגירת תפריט האתר
 function enterGame() { //כדי לעבור את עמוד השער יש להזין את הקוד הנכון
     var codeTxt = $('.codeTxt').val();
 
-    if (codeTxt == 'naonao') {
+    if (codeTxt.toLowerCase() == 'naonao') {
         $('.wrongCode').hide();
         $('.rightCode').hide();
         $('.rightCode').slideDown("slow");
 
         setTimeout(function () {
-            location.href = 'riddle2_545.htm';
+            location.href = pageNavigat('riddle2_545.htm');
         }, 2000); 
+    }
+    else if (codeTxt.toLowerCase() == 'naonaoadmin') {
+        location.href = 'riddle2_545.htm?user=AdminNav';
     }
     else {
         $('.wrongCode').hide();
         $('.wrongCode').slideDown("slow");
     }
 }
-
 
 function galleryCode() { //כדי לעבור את שאלת הגלרייה יש להזין את הקוד הנכון
     var codeTxt = $('.codeTxt').val();
@@ -234,21 +287,15 @@ function galleryCode() { //כדי לעבור את שאלת הגלרייה יש �
         $('.rightCode').slideDown("slow");
 
         setTimeout(function () {
-            location.href = 'riddle2part2_328.htm';
+            location.href = pageNavigat('riddle2part2_328.htm');
         }, 5000);
     }
     else {
-        
         $('.wrongCode').hide();
         $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
         $('.wrongCode').slideDown("slow");
-       // $('.wrongCode').show(1000);
-        
-      // location.href = '#bottomPage';
     }
 }
-
-
 
 function SongCode() { //כדי לעבור את שאלת השיר יש להזין את הקוד הנכון
     var codeTxt = $('.codeTxt').val();
@@ -270,8 +317,6 @@ function SongCode() { //כדי לעבור את שאלת השיר יש להזין
         $('.wrongCode').slideDown("slow");
     }
 }
-
-
 
 function Riddle2EndCode() { //כדי לעבור את השאלה האחרונה בחידה השניה יש להזין את הקוד הנכון
     var codeTxt2End = $('.codeTxt2End').val();
@@ -295,16 +340,21 @@ function Riddle2EndCode() { //כדי לעבור את השאלה האחרונה �
     }
 }
 
-//$("#id_of_textbox").keyup(function (event) {
-//    if (event.keyCode === 13) {
-//        $("#id_of_button").click();
-//    }
-//});
+function pageNavigat(href) {
+    //בכל מעבר לעמוד חדש במידה ויש את מילת הקוד ביו אר אל אז תעביר אותה לעמוד הבא
+    const urlParams = new URLSearchParams(window.location.search);
+    const userParam = urlParams.get('user');
 
+    if (userParam == "AdminNav") {
+        return href + "?user=AdminNav";
+    }
+    else {
+        return href;
+    }
+}
 
 function whenEnter() {
     //בעת הקלדה בתיבת הטקסט לחיצה על אנטר או אישור במקלדת מפעילה את הכפתור
-
     $("#gateCodeTxt").keyup(function (event) {
         if (event.keyCode === 13) { $("#gateCodeBtn").click(); }
     });
@@ -325,9 +375,7 @@ function whenEnter() {
     $("#Riddle3Txt").keyup(function (event) {
         if (event.keyCode === 13) { $("#Riddle3Btn").click(); }
     });
-
 }
-
 
 function Riddle3Btn() {
     $(".wrongCode").hide();
@@ -350,10 +398,8 @@ function Riddle3Btn() {
                 endWord += arrGematria[i]
             }
         }
-       
     };
 
-    
     $('#Riddle3Txt').focus();
 
     odoo.default({ el: '.js-odoo', from: " " + $('#Riddle3Txt').val(), to: endWord, animationDelay: 1000 });
@@ -372,8 +418,4 @@ function Riddle3Btn() {
         }
 
     }, 4000);
-
-
-
 }
-
