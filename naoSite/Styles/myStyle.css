@@ -108,6 +108,7 @@ ol#whyUsList > li > span {
 
 .navStyle {
     font-weight: bold;
+    z-index: 3;
 }
 
 .ActiveNav {
