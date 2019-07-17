@@ -305,6 +305,7 @@ span.aboutImgs span {
     max-height: 380px;
     min-width: 290px;
     min-height: 250px;
+    cursor:pointer;
 }
 
 #imgWrapper {
