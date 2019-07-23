@@ -22,7 +22,13 @@
             excludedElements: "label, button, input, select, textarea"
         });
 
-
+  addEventListener(document, "touchstart", function(e) {
+    console.log(e.defaultPrevented);  // will be false
+    e.preventDefault();   // does nothing since the listener is passive
+    console.log(e.defaultPrevented);  // still false
+  }, Modernizr.passiveeventlisteners ? {passive: true} : false);
+     
+     
     //אפשרות דפדוף בגלרייה של חידה 4 
     $('.modal').swipe({
         swipe: function (event, direction, distance, duration, fingerCount) {
