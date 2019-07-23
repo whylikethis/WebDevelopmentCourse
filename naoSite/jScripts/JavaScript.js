@@ -174,7 +174,7 @@ function checkNiv(n) { //בדיקת המשפט בתוך חידת הדרקון
     }
 
     var nivNum = $('#NivNum').text();
-    if (peMefik != 1 && nivNames[0] == "pe.jpg" && nivNames[1] == "mefik.jpg" && nivNames[2] == "margliut.jpg") {
+    if (peMefik != 1 && nivNames[0] == "love.jpg" && nivNames[1] == "freind.jpg" && nivNames[2] == "you.jpg") {
         peMefik = 1;
         good();
         nivNum++;
@@ -182,15 +182,19 @@ function checkNiv(n) { //בדיקת המשפט בתוך חידת הדרקון
         
     }
 
-    else if (borAm != 1 && nivNames[0] == "bor.jpg" && nivNames[1] == "am.jpg" && nivNames[2] == "hahartz.jpg") {
+    else if (borAm != 1 && nivNames[0] == "bor.jpg" && nivNames[1] == "people.jpg" && nivNames[2] == "haaretzh.jpg") {
         borAm = 1;
         good();
         nivNum++;
         $('#NivNum').text(nivNum);
         
     }
-    else if (nivNames[0] == "enter.jpg" && nivNames[1] == "wine.jpg" && nivNames[2] == "out.jpg" && nivNames[3] == "secret.jpg") {
+    else if (nivNames[0] == "enter.jpg" && nivNames[1] == "wine.jpg" && nivNames[2] == "exit.jpg" && nivNames[3] == "secret.jpg") {
         good();
+        //כאן תבוא הנחיה של חישוב חידה 4 
+        $('.rightCode').hide();
+        $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
+        $('.rightCode').slideDown("slow");
     }
     else {
 
@@ -198,7 +202,7 @@ function checkNiv(n) { //בדיקת המשפט בתוך חידת הדרקון
     }
 
     function good() {
-        alert("כל הכבוד וזה");
+       // alert("כל הכבוד וזה");
         $("#btnNiv" + n).hide();
         $("#Niv" + n + "_Img1").css("opacity", "0.7");
         $("#Niv" + n + "_Img2").css("opacity", "0.7");
@@ -259,17 +263,20 @@ function w3_close() { // סגירת תפריט האתר
 function enterGame() { //כדי לעבור את עמוד השער יש להזין את הקוד הנכון
     var codeTxt = $('.codeTxt').val();
 
-    if (codeTxt.toLowerCase() == 'naonao') {
-        $('.wrongCode').hide();
-        $('.rightCode').hide();
-        $('.rightCode').slideDown("slow");
+    //if (codeTxt.toLowerCase() == 'naonao') {
+    //    $('.wrongCode').hide();
+    //    $('.rightCode').hide();
+    //    $('.rightCode').slideDown("slow");
 
-        setTimeout(function () {
-            location.href = pageNavigat('riddle2_545.htm');
-        }, 2000); 
-    }
-    else if (codeTxt.toLowerCase() == 'naonaoadmin') {
-        location.href = 'riddle2_545.htm?user=AdminNav';
+    //    setTimeout(function () {
+    //        alert("ברוך הבא אדמין.");
+    //        location.href = 'gate.htm';
+    //    }, 2000); 
+    //}
+    //else
+        if (codeTxt.toLowerCase() == 'naonaoadmin') {
+        alert("ברוך הבא אדמין.");
+        location.href = 'gate.htm?user=AdminNav';
     }
     else {
         $('.wrongCode').hide();
@@ -375,6 +382,12 @@ function whenEnter() {
     $("#Riddle3Txt").keyup(function (event) {
         if (event.keyCode === 13) { $("#Riddle3Btn").click(); }
     });
+
+    $("#Riddle4Txt1").keyup(function (event) {
+        if (event.keyCode === 13) { $("#Riddle4Btn1").click(); }
+    });
+
+
 }
 
 function Riddle3Btn() {
@@ -420,4 +433,26 @@ function Riddle3Btn() {
         }
 
     }, 4000);
+}
+
+
+function Riddle4func() {
+    var codeTxt = $('#Riddle4Txt1').val();
+
+    if (codeTxt == 'צבע אדום') {
+        $('.wrongCode').hide();
+        $('.rightCode').hide();
+        $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
+        $('.rightCode').slideDown("slow");
+
+        setTimeout(function () {
+            location.href = pageNavigat('riddle4part2_434.htm');
+        }, 5000);
+    }
+    else {
+        $('.wrongCode').hide();
+        $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
+        $('.wrongCode').slideDown("slow");
+    }
+
 }
