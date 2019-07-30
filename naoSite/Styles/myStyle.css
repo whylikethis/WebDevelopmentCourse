@@ -216,10 +216,6 @@ span.aboutImgs span {
     text-align: center;
 }
 
- #btnGoToR3 {
-    display: none;
-}
-
 .wrongCode, .wrongCode2End {
     display: none;
     /*background-color: rgba(255, 17, 0, 0.2);*/

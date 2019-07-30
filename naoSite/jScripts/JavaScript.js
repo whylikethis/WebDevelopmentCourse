@@ -22,28 +22,22 @@
             excludedElements: "label, button, input, select, textarea"
         });
 
-  addEventListener(document, "touchstart", function(e) {
-    console.log(e.defaultPrevented);  // will be false
-    e.preventDefault();   // does nothing since the listener is passive
-    console.log(e.defaultPrevented);  // still false
-  }, Modernizr.passiveeventlisteners ? {passive: true} : false);
-     
-     
-    //אפשרות דפדוף בגלרייה של חידה 4 
-    $('.modal').swipe({
-        swipe: function (event, direction, distance, duration, fingerCount) {
-            switch (direction) {
-                case "left":
-                    picGallery(1);
-                    break;
-                case "right":
-                    picGallery(-1);
-                    break;
-            }
-        },
-        // Here your list of excluded elements ...
-        excludedElements: "label, button, input, select, textarea"
-    });
+
+    ////אפשרות דפדוף בגלרייה של חידה 4 
+    //$('.modal').swipe({
+    //    swipe: function (event, direction, distance, duration, fingerCount) {
+    //        switch (direction) {
+    //            case "left":
+    //                picGallery(1);
+    //                break;
+    //            case "right":
+    //                picGallery(-1);
+    //                break;
+    //        }
+    //    },
+    //    // Here your list of excluded elements ...
+    //    excludedElements: "label, button, input, select, textarea"
+    //});
 
 
     whenEnter(); //לחיצה על אנטר בתיבת טקסט
@@ -101,7 +95,7 @@ function imgModal(event, fname) { //מגדיל את התמונה
     if (fname == 'heros') {//אם אנחנו בחידת בלאק ממבה
         captionText.innerHTML = "הראו לנאו את התמונה לקבלת משוב" //this.alt;
     }
-    else {//אם אנחנו בחידת דרקון כחול
+    else {//אם אנחנו בחידת לילה אדום
         var ImgCaptionText = "בחר את מיקום התמונה במשפט או סגור לביטול <br/> "
 
         var wordsInNiv = $('#WordsInNiv').text();
@@ -130,6 +124,7 @@ function picGallery(n) {
     showNextPic(newNum);
 }
 
+//כפתור הבא והקודם בגלריה של חידה 4 - לילה אדום
 function showNextPic(n) {
     var x = document.getElementsByClassName("imgRnd");
     if (n >= (x.length - 1)) { n = 0 }
@@ -150,11 +145,12 @@ function NivImgClick(n) {
     //שולחת תמונה קטנה למיקום בתוך המסגרת המתאימה
     var modal = document.getElementById('myModal');
     modal.style.display = "none";
+    var modalImg = document.getElementById("imgBig");
 
 
     var nivNum = $('#NivNum').text();
     var nivDiv = "#Niv" + nivNum.toString() + "_w" + n.toString();
-    var imgTag = "<img id='Niv" + nivNum.toString() + "_Img" + + n.toString() +"' class='smallPicNivImg' src='" + imgurl +"' />";
+    var imgTag = "<img id='Niv" + nivNum.toString() + "_Img" + + n.toString() + "' class='smallPicNivImg' src='" + modalImg.src +"' />";
     $(nivDiv).html(imgTag);
 }
 
@@ -340,7 +336,7 @@ function Riddle2EndCode() { //כדי לעבור את השאלה האחרונה �
         $('.wrongCode2End').hide();
         $('.rightCode2End').hide();
         $('.rightCode2End').slideDown("slow");
-        $('#btnGoToR3').slideDown("slow");
+        //$('#btnGoToR3').slideDown("slow");
         
         setTimeout(function () {
           //  location.href = 'riddle2part2_328.htm';
